@@ -27,7 +27,10 @@ namespace Login
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            var form = new Checkin();
+            form.Closed += (s, args) => this.Close();
+            form.Show();
         }
     }
 }

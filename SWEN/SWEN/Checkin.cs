@@ -16,11 +16,5 @@ namespace Login
         {
             InitializeComponent();
         }
-
-        private void Checkin_Load(object sender, EventArgs e)
-        {
-
-            this.reportViewer1.RefreshReport();
-        }
     }
 }
