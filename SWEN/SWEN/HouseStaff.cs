@@ -32,5 +32,10 @@ namespace Login
             form.Closed += (s, args) => this.Close();
             form.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
