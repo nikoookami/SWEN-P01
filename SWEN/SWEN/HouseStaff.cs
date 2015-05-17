@@ -24,5 +24,13 @@ namespace Login
             form.Closed += (s, args) => this.Close();
             form.Show();
         }
+
+        private void buttonAddStaff_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+            var form = new AddStaff();
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
     }
 }
