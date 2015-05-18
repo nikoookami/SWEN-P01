@@ -29,7 +29,7 @@ namespace Login
         {
             //this.Hide();
             var form = new AddStaff();
-            form.Closed += (s, args) => this.Close();
+            //form.Closed += (s, args) => this.Close();
             form.Show();
         }
 

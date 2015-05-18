@@ -40,5 +40,23 @@ namespace Login
             //form.Closed += (s, args) => this.Close();
             form.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+            var form = new Reservation();
+            //form.Closed += (s, args) => this.Close();
+            form.Show();
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+            var form = new UpdateBooking();
+            //form.Closed += (s, args) => this.Close();
+            form.Show();
+
+        }
     }
 }
