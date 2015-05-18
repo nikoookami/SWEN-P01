@@ -162,7 +162,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\Downloads\System.Windows.Forms.Calendar\System.Windows.Forms.Calendar\System.Windows.Forms.Calendar.csproj">
+    <ProjectReference Include="..\System.Windows.Forms.Calendar\System.Windows.Forms.Calendar.csproj">
       <Project>{25649F08-3046-4891-ADB8-7EA787B57063}</Project>
       <Name>System.Windows.Forms.Calendar</Name>
     </ProjectReference>

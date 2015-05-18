@@ -46,17 +46,17 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.button4 = new System.Windows.Forms.Button();
-            this.StaffName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.StaffID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.StaffUsername = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.StaffName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button4 = new System.Windows.Forms.Button();
             this.calendar1 = new System.Windows.Forms.Calendar.Calendar();
             this.SuspendLayout();
             // 
             // buttonBackToHome
             // 
             this.buttonBackToHome.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonBackToHome.Location = new System.Drawing.Point(749, 12);
+            this.buttonBackToHome.Location = new System.Drawing.Point(830, 12);
             this.buttonBackToHome.Name = "buttonBackToHome";
             this.buttonBackToHome.Size = new System.Drawing.Size(96, 23);
             this.buttonBackToHome.TabIndex = 5;
@@ -112,6 +112,18 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
+            // StaffID
+            // 
+            this.StaffID.Text = "Staff ID";
+            // 
+            // StaffUsername
+            // 
+            this.StaffUsername.Text = "Staff Username";
+            // 
+            // StaffName
+            // 
+            this.StaffName.Text = "Staff Name";
+            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(12, 70);
@@ -122,21 +134,8 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // StaffName
-            // 
-            this.StaffName.Text = "Staff Name";
-            // 
-            // StaffID
-            // 
-            this.StaffID.Text = "Staff ID";
-            // 
-            // StaffUsername
-            // 
-            this.StaffUsername.Text = "Staff Username";
-            // 
             // calendar1
             // 
-            this.calendar1.FirstDayOfWeek = System.DayOfWeek.Monday;
             this.calendar1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             calendarHighlightRange1.DayOfWeek = System.DayOfWeek.Monday;
             calendarHighlightRange1.EndTime = System.TimeSpan.Parse("17:00:00");
@@ -159,9 +158,9 @@
         calendarHighlightRange3,
         calendarHighlightRange4,
         calendarHighlightRange5};
-            this.calendar1.Location = new System.Drawing.Point(445, 41);
+            this.calendar1.Location = new System.Drawing.Point(446, 41);
             this.calendar1.Name = "calendar1";
-            this.calendar1.Size = new System.Drawing.Size(481, 434);
+            this.calendar1.Size = new System.Drawing.Size(480, 434);
             this.calendar1.TabIndex = 13;
             this.calendar1.Text = "calendar1";
             // 
