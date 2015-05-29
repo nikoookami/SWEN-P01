@@ -28,29 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxStaffName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxBankAcc = new System.Windows.Forms.TextBox();
+            this.textBoxPhone = new System.Windows.Forms.TextBox();
+            this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxStaffLevel = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxDutyType = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerDoB = new System.Windows.Forms.DateTimePicker();
+            this.Btn_AddStaff = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBoxStaffName
             // 
-            this.textBox1.Location = new System.Drawing.Point(105, 6);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "John Chan";
+            this.textBoxStaffName.Location = new System.Drawing.Point(105, 6);
+            this.textBoxStaffName.Name = "textBoxStaffName";
+            this.textBoxStaffName.Size = new System.Drawing.Size(167, 20);
+            this.textBoxStaffName.TabIndex = 0;
+            this.textBoxStaffName.Text = "John Chan";
             // 
             // label1
             // 
@@ -79,29 +80,29 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Date of birth";
             // 
-            // textBox2
+            // textBoxBankAcc
             // 
-            this.textBox2.Location = new System.Drawing.Point(105, 110);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(167, 20);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "015-74655-927";
+            this.textBoxBankAcc.Location = new System.Drawing.Point(105, 110);
+            this.textBoxBankAcc.Name = "textBoxBankAcc";
+            this.textBoxBankAcc.Size = new System.Drawing.Size(167, 20);
+            this.textBoxBankAcc.TabIndex = 4;
+            this.textBoxBankAcc.Text = "015-74655-927";
             // 
-            // textBox3
+            // textBoxPhone
             // 
-            this.textBox3.Location = new System.Drawing.Point(105, 84);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(167, 20);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.Text = "81282389";
+            this.textBoxPhone.Location = new System.Drawing.Point(105, 84);
+            this.textBoxPhone.Name = "textBoxPhone";
+            this.textBoxPhone.Size = new System.Drawing.Size(167, 20);
+            this.textBoxPhone.TabIndex = 5;
+            this.textBoxPhone.Text = "81282389";
             // 
-            // textBox4
+            // textBoxAddress
             // 
-            this.textBox4.Location = new System.Drawing.Point(105, 58);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(167, 20);
-            this.textBox4.TabIndex = 6;
-            this.textBox4.Text = "32 Geylang Lor 123";
+            this.textBoxAddress.Location = new System.Drawing.Point(105, 58);
+            this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.Size = new System.Drawing.Size(167, 20);
+            this.textBoxAddress.TabIndex = 6;
+            this.textBoxAddress.Text = "32 Geylang Lor 123";
             // 
             // label4
             // 
@@ -121,18 +122,18 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Phone number";
             // 
-            // comboBox1
+            // comboBoxStaffLevel
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxStaffLevel.FormattingEnabled = true;
+            this.comboBoxStaffLevel.Items.AddRange(new object[] {
             "Administration",
             "Management",
             "Receptionist"});
-            this.comboBox1.Location = new System.Drawing.Point(105, 136);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(167, 21);
-            this.comboBox1.TabIndex = 10;
-            this.comboBox1.Text = "Receptionist";
+            this.comboBoxStaffLevel.Location = new System.Drawing.Point(105, 136);
+            this.comboBoxStaffLevel.Name = "comboBoxStaffLevel";
+            this.comboBoxStaffLevel.Size = new System.Drawing.Size(167, 21);
+            this.comboBoxStaffLevel.TabIndex = 10;
+            this.comboBoxStaffLevel.Text = "Receptionist";
             // 
             // label6
             // 
@@ -152,48 +153,59 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Duty type";
             // 
-            // comboBox2
+            // comboBoxDutyType
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBoxDutyType.FormattingEnabled = true;
+            this.comboBoxDutyType.Items.AddRange(new object[] {
             "General maintenance",
             "Room maintenance",
             "Estate maintenance",
             "Security"});
-            this.comboBox2.Location = new System.Drawing.Point(105, 163);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(167, 21);
-            this.comboBox2.TabIndex = 12;
-            this.comboBox2.Text = "Security";
+            this.comboBoxDutyType.Location = new System.Drawing.Point(105, 163);
+            this.comboBoxDutyType.Name = "comboBoxDutyType";
+            this.comboBoxDutyType.Size = new System.Drawing.Size(167, 21);
+            this.comboBoxDutyType.TabIndex = 12;
+            this.comboBoxDutyType.Text = "Security";
             // 
-            // dateTimePicker1
+            // dateTimePickerDoB
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(105, 32);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(167, 20);
-            this.dateTimePicker1.TabIndex = 38;
-            this.dateTimePicker1.Value = new System.DateTime(1992, 6, 20, 0, 0, 0, 0);
+            this.dateTimePickerDoB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerDoB.Location = new System.Drawing.Point(105, 32);
+            this.dateTimePickerDoB.Name = "dateTimePickerDoB";
+            this.dateTimePickerDoB.Size = new System.Drawing.Size(167, 20);
+            this.dateTimePickerDoB.TabIndex = 38;
+            this.dateTimePickerDoB.Value = new System.DateTime(1992, 6, 20, 0, 0, 0, 0);
+            // 
+            // Btn_AddStaff
+            // 
+            this.Btn_AddStaff.Location = new System.Drawing.Point(197, 194);
+            this.Btn_AddStaff.Name = "Btn_AddStaff";
+            this.Btn_AddStaff.Size = new System.Drawing.Size(75, 23);
+            this.Btn_AddStaff.TabIndex = 39;
+            this.Btn_AddStaff.Text = "Add";
+            this.Btn_AddStaff.UseVisualStyleBackColor = true;
+            this.Btn_AddStaff.Click += new System.EventHandler(this.btnAddStaff_Click);
             // 
             // AddStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.dateTimePicker1);
+            this.ClientSize = new System.Drawing.Size(284, 229);
+            this.Controls.Add(this.Btn_AddStaff);
+            this.Controls.Add(this.dateTimePickerDoB);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBoxDutyType);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxStaffLevel);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxAddress);
+            this.Controls.Add(this.textBoxPhone);
+            this.Controls.Add(this.textBoxBankAcc);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxStaffName);
             this.Name = "AddStaff";
             this.Text = "AddStaff";
             this.Load += new System.EventHandler(this.AddStaff_Load);
@@ -204,19 +216,20 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxStaffName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxBankAcc;
+        private System.Windows.Forms.TextBox textBoxPhone;
+        private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxStaffLevel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox comboBoxDutyType;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDoB;
+        private System.Windows.Forms.Button Btn_AddStaff;
     }
 }
