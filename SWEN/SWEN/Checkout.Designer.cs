@@ -187,7 +187,7 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label1);
             this.Name = "Checkout";
-            this.Text = "Check-out Form";
+            this.Text = "Checkout";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -35,10 +35,7 @@ namespace Login
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //this.Hide();
-            var form = new UpdateStaff();
-            //form.Closed += (s, args) => this.Close();
-            form.Show();
+
         }
     }
 }
