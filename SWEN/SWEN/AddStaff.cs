@@ -41,7 +41,6 @@ namespace Login
                 string staffLvl;
                 string dutyType;
 
-
                 int countCheck = 0;
 
                 if (countCheck == 0)
@@ -119,7 +118,6 @@ namespace Login
                                                             }
                                                             else
                                                             {
-                                                                //countCheck = 0;
                                                                 redo();
                                                                 goto done;
                                                             }
