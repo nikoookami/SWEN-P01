@@ -92,7 +92,7 @@
             this.textBoxBankAcc.Name = "textBoxBankAcc";
             this.textBoxBankAcc.Size = new System.Drawing.Size(167, 20);
             this.textBoxBankAcc.TabIndex = 4;
-            this.textBoxBankAcc.Text = "015-74655-927";
+            this.textBoxBankAcc.Text = "0157465592";
             // 
             // textBoxPhone
             // 
@@ -130,6 +130,7 @@
             // 
             // comboBoxStaffLevel
             // 
+            this.comboBoxStaffLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxStaffLevel.FormattingEnabled = true;
             this.comboBoxStaffLevel.Items.AddRange(new object[] {
             "Administration",
@@ -139,7 +140,6 @@
             this.comboBoxStaffLevel.Name = "comboBoxStaffLevel";
             this.comboBoxStaffLevel.Size = new System.Drawing.Size(167, 21);
             this.comboBoxStaffLevel.TabIndex = 10;
-            this.comboBoxStaffLevel.Text = "Receptionist";
             // 
             // label6
             // 
@@ -161,6 +161,7 @@
             // 
             // comboBoxDutyType
             // 
+            this.comboBoxDutyType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDutyType.FormattingEnabled = true;
             this.comboBoxDutyType.Items.AddRange(new object[] {
             "General maintenance",
@@ -171,7 +172,6 @@
             this.comboBoxDutyType.Name = "comboBoxDutyType";
             this.comboBoxDutyType.Size = new System.Drawing.Size(167, 21);
             this.comboBoxDutyType.TabIndex = 12;
-            this.comboBoxDutyType.Text = "Security";
             // 
             // dateTimePickerDoB
             // 
