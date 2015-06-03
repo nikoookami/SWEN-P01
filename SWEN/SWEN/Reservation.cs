@@ -25,11 +25,11 @@ namespace Login
             string room;
             string adult;
             string children;
-             checkin=label2.Text;
-             checkout = label4.Text;
-             room = label8.Text;
-             adult = label11.Text;
-             children = label10.Text;
+            checkin = dateTimePicker1.Text;
+            checkout = dateTimePicker2.Text;
+             room = comboBox1.Text;
+             adult = comboBox3.Text;
+             children = comboBox4.Text;
              
            booking p=new booking(checkin, checkout, room, adult, children);
             DataBase.Insertbookinfo(p);
