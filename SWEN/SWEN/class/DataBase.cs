@@ -31,7 +31,7 @@ namespace Login
                             "(check_in_date, check_out_date,no_of_rooms,no_of_adults,no_of_children) values " +
                             "(@check_in_date,@check_out_date,@no_of_rooms,@no_of_adults,@no_of_children);" 
                             ;
-                    comm.Parameters.AddWithValue("(@check_in_date", u.Checkin);
+                    comm.Parameters.AddWithValue("@check_in_date", u.Checkin);
                     comm.Parameters.AddWithValue("@check_out_date", u.Checkout);
                     comm.Parameters.AddWithValue("@no_of_rooms", u.NoOfRoom);
                     comm.Parameters.AddWithValue("@no_of_adults", u.NoOfAdult);
