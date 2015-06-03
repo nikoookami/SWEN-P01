@@ -63,8 +63,7 @@ namespace SWEN_Assignment_3.Reports
                     output += "Room Type: " + rm.room_type + Environment.NewLine;
                     output += "Room Status: " + rm.status + Environment.NewLine;
                     output += "Room Rates: " + rm.room_rates + Environment.NewLine + Environment.NewLine;
-                }
-
+               }
                 rt.overrideHTML(output);
             }
         }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HTMLReport
 {
-    class HTMLReport
+    class TMLReport
     {
         
     }

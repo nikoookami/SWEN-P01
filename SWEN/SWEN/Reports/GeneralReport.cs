@@ -29,7 +29,7 @@ namespace SWEN_Assignment_3.Reports
             Room rm = new Room();
             rm = RoomDBManager.getRoomByRn(tbxRoomNoSearch.Text);
             Book bk = new Book();
-            bk = BookingDBManager.getbookingByID(rm.bookingid);
+            bk = BookingDBManager.GetbookingByID(rm.bookingid);
 
             string output = "";
 

@@ -9,14 +9,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HTMLReport;
+using System.IO;
 
 namespace SWEN_Assignment_3.Reports
 {
     public partial class RoomOccupancyReport : Form
     {
+        HTMLReportTableNormal rt;
+
         public RoomOccupancyReport()
         {
             InitializeComponent();
+            rt = new HTMLReportTableNormal("");
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -30,12 +36,12 @@ namespace SWEN_Assignment_3.Reports
         private void button1_Click(object sender, EventArgs e)
         {
             ArrayList list = RoomDBManager.GetAllRoom();
-            ArrayList list1 = BookingDBManager.getAllBooking();
+            ArrayList list1 = BookingDBManager.GetAllBooking();
 
             Room rm = new Room();
             rm = RoomDBManager.GetRoomByDate(dtpStartDate.Text);
             Book bk = new Book();
-            bk = BookingDBManager.getbookingByID(rm.bookingid);
+            bk = BookingDBManager.GetbookingByID(rm.bookingid);
 
             string output = "";
             int roomcount = 0;
@@ -73,15 +79,14 @@ namespace SWEN_Assignment_3.Reports
                     }
                         
                         total =+ (occupiedroomcount/roomcount)*100;
-
-                        //output += "Guest ID: " + booking.guestid + Environment.NewLine;
                     }
                 }
             
                 output += "Statistics: " + Environment.NewLine;
                 output += "Percentage of the rooms that are occupied over the total number of rooms: " + total + Environment.NewLine;
-                tbxOutput.Clear();
-                tbxOutput.Text += output;
+
+                rt.overrideHTML(output);
+                wbOutput.DocumentText = rt.generateHTML(false);
                 
             }
    
@@ -98,6 +103,25 @@ namespace SWEN_Assignment_3.Reports
          private void btnMonthly_Click(object sender, EventArgs e)
          {
 
+         }
+
+         private void btnPrint_Click(object sender, EventArgs e)
+         {
+             wbOutput.DocumentText = rt.generateHTML(true);
+         }
+
+         private void btnSave_Click(object sender, EventArgs e)
+         {
+             sfdDocSave.Filter = "HTML documents (*.html)|*.html";
+             sfdDocSave.ShowDialog();
+         }
+
+         private void sfdDocSave_FileOk(object sender, CancelEventArgs e)
+         {
+             string name = sfdDocSave.FileName;
+             StreamWriter w = new StreamWriter(name);
+             w.Write(rt.generateHTML(false));
+             w.Close();
          }
     }
 }

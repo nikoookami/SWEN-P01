@@ -1,5 +1,4 @@
-﻿using Login;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -55,14 +54,6 @@ namespace SWEN_Assignment_3.Reports
         {
             this.Hide();
             var form = new RoomStatusReport();
-            form.FormClosed += (s, args) => this.Close();
-            form.Show();
-        }
-
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var form = new Home();
             form.FormClosed += (s, args) => this.Close();
             form.Show();
         }

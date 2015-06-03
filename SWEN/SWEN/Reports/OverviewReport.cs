@@ -28,7 +28,7 @@ namespace SWEN_Assignment_3.Reports
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ArrayList list = BookingDBManager.getAllBooking();
+            ArrayList list = BookingDBManager.GetAllBooking();
             string output = "";
             int adultcount = 0;
             int childrencount = 0;

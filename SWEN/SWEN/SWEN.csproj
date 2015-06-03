@@ -109,15 +109,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reports\GeneralReport.cs" />
+    <Compile Include="Reports\GeneralReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reports\GeneralReport.Designer.cs">
       <DependentUpon>GeneralReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\HousekeepingReport.cs" />
+    <Compile Include="Reports\HousekeepingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reports\HousekeepingReport.Designer.cs">
       <DependentUpon>HousekeepingReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\OverviewReport.cs" />
+    <Compile Include="Reports\OverviewReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reports\OverviewReport.Designer.cs">
       <DependentUpon>OverviewReport.cs</DependentUpon>
     </Compile>
@@ -127,11 +133,15 @@
     <Compile Include="Reports\ReportMenu.Designer.cs">
       <DependentUpon>ReportMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\RoomOccupancyReport.cs" />
+    <Compile Include="Reports\RoomOccupancyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reports\RoomOccupancyReport.Designer.cs">
       <DependentUpon>RoomOccupancyReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\RoomStatusReport.cs" />
+    <Compile Include="Reports\RoomStatusReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reports\RoomStatusReport.Designer.cs">
       <DependentUpon>RoomStatusReport.cs</DependentUpon>
     </Compile>
@@ -235,6 +245,7 @@
       <Name>System.Windows.Forms.Calendar</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

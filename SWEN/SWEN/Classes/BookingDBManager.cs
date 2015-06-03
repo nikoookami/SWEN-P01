@@ -14,54 +14,7 @@ namespace SWEN_Assignment_3.Classes
     {
         private const string GSM_CONN_STR = "data source=localhost;" +
                 "initial catalog=DelonixRegia;integrated security=true;";
-
-        
-        /*public static ArrayList GetAllBooking()
-        {
-            ArrayList booking = new ArrayList();
-            SqlConnection conn = null;
-            Book b = new Book();
-            try
-            {
-                conn = new SqlConnection();
-
-                conn.ConnectionString = GSM_CONN_STR;
-                conn.Open();
-                SqlCommand comm = new SqlCommand();
-                comm.Connection = conn;
-                
-                comm.CommandText = "SELECT * FROM Booking";
-                SqlDataReader dr = comm.ExecuteReader();
-                while (dr.Read())
-                {
-                    
-                    b.bookingid = (int)dr["bookingid"];
-                    b.check_in_date = (string)dr["check_in_date"];
-                    b.check_out_date = (string)dr["check_out_date"];
-                    b.no_of_rooms = (int)dr["no_of_rooms"];
-                    b.no_of_adults = (int)dr["no_of_adults"];
-                    b.no_of_children = (int)dr["no_of_children"];
-                    b.guestid = (int)dr["guestid"];
-                    b.staffid = (int)dr["staffid"];
-
-                    booking.Add(b);
-                }
-                dr.Close();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            finally
-            {
-                conn.Close();
-            }
-            return booking;
-
-        }*/
-        
-
-        
+    
         public static Book GetBookingByDate(string date)
         {
             ArrayList booking = new ArrayList();
@@ -106,7 +59,7 @@ namespace SWEN_Assignment_3.Classes
         }
          
 
-        public static Book getbookingByID(int bookingid)
+        public static Book GetbookingByID(int bookingid)
         {
             DatabaseRetrieveQuery r = new DatabaseRetrieveQuery("Booking");
             r.AddRestriction("bookingid", "=", Convert.ToString(bookingid));
@@ -130,7 +83,7 @@ namespace SWEN_Assignment_3.Classes
             return c;
         }
         
-        public static ArrayList getAllBooking()
+        public static ArrayList GetAllBooking()
         {
             DatabaseRetrieveQuery r = new DatabaseRetrieveQuery("Booking");
             SqlDataReader dr = r.RunQuery();

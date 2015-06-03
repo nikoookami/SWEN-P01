@@ -33,9 +33,12 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
-            this.tbxOutput = new System.Windows.Forms.TextBox();
             this.btnWeekly = new System.Windows.Forms.Button();
             this.btnMonthly = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.wbOutput = new System.Windows.Forms.WebBrowser();
+            this.sfdDocSave = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // label3
@@ -84,18 +87,9 @@
             this.dtpStartDate.Size = new System.Drawing.Size(200, 26);
             this.dtpStartDate.TabIndex = 10;
             // 
-            // tbxOutput
-            // 
-            this.tbxOutput.Location = new System.Drawing.Point(40, 249);
-            this.tbxOutput.Multiline = true;
-            this.tbxOutput.Name = "tbxOutput";
-            this.tbxOutput.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.tbxOutput.Size = new System.Drawing.Size(560, 361);
-            this.tbxOutput.TabIndex = 12;
-            // 
             // btnWeekly
             // 
-            this.btnWeekly.Location = new System.Drawing.Point(277, 169);
+            this.btnWeekly.Location = new System.Drawing.Point(314, 169);
             this.btnWeekly.Name = "btnWeekly";
             this.btnWeekly.Size = new System.Drawing.Size(88, 41);
             this.btnWeekly.TabIndex = 13;
@@ -105,7 +99,7 @@
             // 
             // btnMonthly
             // 
-            this.btnMonthly.Location = new System.Drawing.Point(500, 169);
+            this.btnMonthly.Location = new System.Drawing.Point(623, 169);
             this.btnMonthly.Name = "btnMonthly";
             this.btnMonthly.Size = new System.Drawing.Size(88, 41);
             this.btnMonthly.TabIndex = 14;
@@ -113,14 +107,48 @@
             this.btnMonthly.UseVisualStyleBackColor = true;
             this.btnMonthly.Click += new System.EventHandler(this.btnMonthly_Click);
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(80, 640);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(88, 41);
+            this.btnSave.TabIndex = 15;
+            this.btnSave.Text = "Save As";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Location = new System.Drawing.Point(539, 640);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(88, 41);
+            this.btnPrint.TabIndex = 16;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // wbOutput
+            // 
+            this.wbOutput.Location = new System.Drawing.Point(13, 216);
+            this.wbOutput.MinimumSize = new System.Drawing.Size(20, 20);
+            this.wbOutput.Name = "wbOutput";
+            this.wbOutput.Size = new System.Drawing.Size(737, 418);
+            this.wbOutput.TabIndex = 17;
+            // 
+            // sfdDocSave
+            // 
+            this.sfdDocSave.FileOk += new System.ComponentModel.CancelEventHandler(this.sfdDocSave_FileOk);
+            // 
             // RoomOccupancyReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 636);
+            this.ClientSize = new System.Drawing.Size(762, 693);
+            this.Controls.Add(this.wbOutput);
+            this.Controls.Add(this.btnPrint);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnMonthly);
             this.Controls.Add(this.btnWeekly);
-            this.Controls.Add(this.tbxOutput);
             this.Controls.Add(this.dtpStartDate);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnBack);
@@ -140,8 +168,11 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtpStartDate;
-        private System.Windows.Forms.TextBox tbxOutput;
         private System.Windows.Forms.Button btnWeekly;
         private System.Windows.Forms.Button btnMonthly;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.WebBrowser wbOutput;
+        private System.Windows.Forms.SaveFileDialog sfdDocSave;
     }
 }
