@@ -79,7 +79,46 @@ namespace SWEN_Assignment_3.Classes
             return c;
         }
 
+        public static Room GetRoomByDate(string date)
+        {
+            ArrayList booking = new ArrayList();
+            SqlConnection conn = null;
+            Room rm = null;
+            try
+            {
+                conn = new SqlConnection();
 
+                conn.ConnectionString = GSM_CONN_STR;
+                conn.Open();
+                SqlCommand comm = new SqlCommand();
+                comm.Connection = conn;
+                comm.CommandText = "SELECT * FROM Room WHERE check_in_date = '" + date + "'";
+                SqlDataReader dr = comm.ExecuteReader();
+                while (dr.Read())
+                {
+                    rm = new Room();
+                    rm.roomid = (int)dr["roomid"];
+                    rm.bookingid = (int)dr["bookingid"];
+                    rm.roomno = (string)dr["roomno"];
+                    rm.room_type = (string)dr["room_type"];
+                    rm.bed_type = (string)dr["bed_type"];
+                    rm.status = (string)dr["status"];
+                    rm.room_rates = (decimal)dr["room_rates"];
+
+                }
+                dr.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return rm;
+
+        }
         
     }
 }

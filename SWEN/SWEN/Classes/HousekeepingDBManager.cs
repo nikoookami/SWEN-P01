@@ -52,5 +52,45 @@ namespace SWEN_Assignment_3.Classes
             }
             return housekeeping;
         }
+
+        public static Housekeeping GetHousekeepingByDate(string date)
+        {
+            ArrayList booking = new ArrayList();
+            SqlConnection conn = null;
+            Housekeeping b = null;
+            try
+            {
+                conn = new SqlConnection();
+
+                conn.ConnectionString = GSM_CONN_STR;
+                conn.Open();
+                SqlCommand comm = new SqlCommand();
+                comm.Connection = conn;
+                comm.CommandText = "SELECT * FROM Housekeeping WHERE housekeepingdate = '" + date + "'";
+                SqlDataReader dr = comm.ExecuteReader();
+                while (dr.Read())
+                {
+                    b = new Housekeeping();
+                    b.housekeepingid = (int)dr["housekeepingid"];
+                    b.housekeepingtype = (string)dr["housekeepingtype"];
+                    b.housekeepingdate = (string)dr["housekeepingdate"];
+                    b.housekeepingtime = (string)dr["housekeepingtime"];
+                    b.staffid = (int)dr["staffid"];
+                    b.roomid = (int)dr["roomid"];
+
+                }
+                dr.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return b;
+
+        }
     }
 }

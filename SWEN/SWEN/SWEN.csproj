@@ -80,6 +80,13 @@
     <Compile Include="Classes\RoomDBManager.cs" />
     <Compile Include="Classes\Staff.cs" />
     <Compile Include="Classes\UserAccount.cs" />
+    <Compile Include="DatabaseHelper\DatabaseConnectionString.cs" />
+    <Compile Include="DatabaseHelper\DatabaseDeleteQuery.cs" />
+    <Compile Include="DatabaseHelper\DatabaseHelperMain.cs" />
+    <Compile Include="DatabaseHelper\DatabaseHelperSettings.cs" />
+    <Compile Include="DatabaseHelper\DatabaseInsertQuery.cs" />
+    <Compile Include="DatabaseHelper\DatabaseRetrieveQuery.cs" />
+    <Compile Include="DatabaseHelper\DatabaseUpdateQuery.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +99,8 @@
     <Compile Include="HouseStaff.Designer.cs">
       <DependentUpon>HouseStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="HTMLReport\HTMLReport.cs" />
+    <Compile Include="HTMLReport\HTMLReportTableNormal.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
