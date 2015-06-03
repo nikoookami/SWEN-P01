@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange6 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange7 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange8 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange9 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange10 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange1 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange2 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange3 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange4 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
+            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange5 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
             this.buttonBackToHome = new System.Windows.Forms.Button();
             this.buttonCancelShift = new System.Windows.Forms.Button();
             this.buttonUpdateShift = new System.Windows.Forms.Button();
@@ -51,6 +51,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonDeleteStaff = new System.Windows.Forms.Button();
+            this.buttonCreateShift = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonBackToHome
@@ -67,7 +68,7 @@
             // 
             // buttonCancelShift
             // 
-            this.buttonCancelShift.Location = new System.Drawing.Point(12, 186);
+            this.buttonCancelShift.Location = new System.Drawing.Point(12, 215);
             this.buttonCancelShift.Name = "buttonCancelShift";
             this.buttonCancelShift.Size = new System.Drawing.Size(140, 23);
             this.buttonCancelShift.TabIndex = 8;
@@ -77,7 +78,7 @@
             // 
             // buttonUpdateShift
             // 
-            this.buttonUpdateShift.Location = new System.Drawing.Point(12, 157);
+            this.buttonUpdateShift.Location = new System.Drawing.Point(12, 186);
             this.buttonUpdateShift.Name = "buttonUpdateShift";
             this.buttonUpdateShift.Size = new System.Drawing.Size(140, 23);
             this.buttonUpdateShift.TabIndex = 7;
@@ -174,27 +175,27 @@
             this.calendar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.calendar1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            calendarHighlightRange6.DayOfWeek = System.DayOfWeek.Monday;
-            calendarHighlightRange6.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange6.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange7.DayOfWeek = System.DayOfWeek.Tuesday;
-            calendarHighlightRange7.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange7.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange8.DayOfWeek = System.DayOfWeek.Wednesday;
-            calendarHighlightRange8.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange8.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange9.DayOfWeek = System.DayOfWeek.Thursday;
-            calendarHighlightRange9.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange9.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange10.DayOfWeek = System.DayOfWeek.Friday;
-            calendarHighlightRange10.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange10.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange1.DayOfWeek = System.DayOfWeek.Monday;
+            calendarHighlightRange1.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange1.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange2.DayOfWeek = System.DayOfWeek.Tuesday;
+            calendarHighlightRange2.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange2.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange3.DayOfWeek = System.DayOfWeek.Wednesday;
+            calendarHighlightRange3.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange3.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange4.DayOfWeek = System.DayOfWeek.Thursday;
+            calendarHighlightRange4.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange4.StartTime = System.TimeSpan.Parse("08:00:00");
+            calendarHighlightRange5.DayOfWeek = System.DayOfWeek.Friday;
+            calendarHighlightRange5.EndTime = System.TimeSpan.Parse("17:00:00");
+            calendarHighlightRange5.StartTime = System.TimeSpan.Parse("08:00:00");
             this.calendar1.HighlightRanges = new System.Windows.Forms.Calendar.CalendarHighlightRange[] {
-        calendarHighlightRange6,
-        calendarHighlightRange7,
-        calendarHighlightRange8,
-        calendarHighlightRange9,
-        calendarHighlightRange10};
+        calendarHighlightRange1,
+        calendarHighlightRange2,
+        calendarHighlightRange3,
+        calendarHighlightRange4,
+        calendarHighlightRange5};
             this.calendar1.Location = new System.Drawing.Point(500, 70);
             this.calendar1.Name = "calendar1";
             this.calendar1.Size = new System.Drawing.Size(516, 470);
@@ -224,7 +225,7 @@
             // 
             // buttonDeleteStaff
             // 
-            this.buttonDeleteStaff.Location = new System.Drawing.Point(12, 128);
+            this.buttonDeleteStaff.Location = new System.Drawing.Point(13, 128);
             this.buttonDeleteStaff.Name = "buttonDeleteStaff";
             this.buttonDeleteStaff.Size = new System.Drawing.Size(139, 23);
             this.buttonDeleteStaff.TabIndex = 16;
@@ -232,11 +233,22 @@
             this.buttonDeleteStaff.UseVisualStyleBackColor = true;
             this.buttonDeleteStaff.Click += new System.EventHandler(this.buttonDeleteStaff_Click);
             // 
+            // buttonCreateShift
+            // 
+            this.buttonCreateShift.Location = new System.Drawing.Point(12, 157);
+            this.buttonCreateShift.Name = "buttonCreateShift";
+            this.buttonCreateShift.Size = new System.Drawing.Size(140, 23);
+            this.buttonCreateShift.TabIndex = 17;
+            this.buttonCreateShift.Text = "Create shift";
+            this.buttonCreateShift.UseVisualStyleBackColor = true;
+            this.buttonCreateShift.Click += new System.EventHandler(this.buttonCreateShift_Click);
+            // 
             // HouseStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 552);
+            this.Controls.Add(this.buttonCreateShift);
             this.Controls.Add(this.buttonDeleteStaff);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label2);
@@ -275,5 +287,6 @@
         private System.Windows.Forms.ColumnHeader housekeepingid;
         private System.Windows.Forms.ColumnHeader username;
         private System.Windows.Forms.Button buttonDeleteStaff;
+        private System.Windows.Forms.Button buttonCreateShift;
     }
 }

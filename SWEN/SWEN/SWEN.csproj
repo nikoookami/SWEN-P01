@@ -65,6 +65,12 @@
     <Compile Include="Checkout.Designer.cs">
       <DependentUpon>Checkout.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateShift.Designer.cs">
+      <DependentUpon>CreateShift.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeleteStaff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,12 @@
     <Compile Include="UpdateBooking.Designer.cs">
       <DependentUpon>UpdateBooking.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateShift.Designer.cs">
+      <DependentUpon>UpdateShift.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateStaff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Checkout.resx">
       <DependentUpon>Checkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateShift.resx">
+      <DependentUpon>CreateShift.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteStaff.resx">
       <DependentUpon>DeleteStaff.cs</DependentUpon>
@@ -168,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateBooking.resx">
       <DependentUpon>UpdateBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateShift.resx">
+      <DependentUpon>UpdateShift.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateStaff.resx">
       <DependentUpon>UpdateStaff.cs</DependentUpon>

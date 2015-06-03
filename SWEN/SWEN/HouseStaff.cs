@@ -76,13 +76,24 @@ namespace SWEN
 
         private void buttonUpdateShift_Click(object sender, EventArgs e)
         {
-
+            //this.Hide();
+            var form = new UpdateShift();
+            //form.Closed += (s, args) => this.Close();
+            form.Show();
         }
 
         private void buttonDeleteStaff_Click(object sender, EventArgs e)
         {
             //this.Hide();
             var form = new DeleteStaff();
+            //form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
+
+        private void buttonCreateShift_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+            var form = new CreateShift();
             //form.Closed += (s, args) => this.Close();
             form.Show();
         }

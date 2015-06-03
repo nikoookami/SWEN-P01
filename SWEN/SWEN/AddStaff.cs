@@ -26,6 +26,7 @@ namespace SWEN
         {
             // TODO: This line of code loads data into the 'delonixRegiaDataSet.Housekeeping' table. You can move, or remove it, as needed.
             this.housekeepingTableAdapter.Fill(this.delonixRegiaDataSet.Housekeeping);
+            comboBoxDutyType.SelectedItem = null;
         }
 
         private void btnAddStaff_Click(object sender, EventArgs e)
@@ -58,22 +59,6 @@ namespace SWEN
                         countCheck++;
                         username = textBoxUserName.Text;
 
-                        // Check PASSWORD
-                        //if (!textBoxPassword.Text.Contains(" "))
-                        //{
-                        //countCheck++;
-                        //password = textBoxPassword.Text;
-
-                        // Check if POSTALCODE
-                        //if (textBoxPostalCode.Text.Length == 6)
-                        //{
-                        //    int intPostalCode;
-                        //    bool isNumeric = int.TryParse(textBoxPostalCode.Text, out intPostalCode);
-                        //    if (isNumeric)
-                        //    {
-                        //        countCheck++;
-                        //        postalCode = textBoxPostalCode.Text;
-
                         // Check if PHONENUM
                         if (textBoxPhone.Text.Length == 8)
                         {
@@ -93,12 +78,6 @@ namespace SWEN
                                     {
                                         countCheck++;
                                         bankAcc = textBoxBankAcc.Text;
-
-                                        // Check STAFFLVL
-                                        //if (comboBoxStaffLevel.SelectedItem != null)
-                                        //{
-                                        //    countCheck++;
-                                        //    staffLvl = comboBoxStaffLevel.Text;
 
                                         // Check DUTYTYPE
                                         if (comboBoxDutyType.SelectedItem != null)
@@ -125,10 +104,7 @@ namespace SWEN
                                             }
                                         }
                                         else
-                                        {
-                                            //dutyID = comboBoxDutyType.Text;
-
-                                            // If all correct update Database                    
+                                        {                
                                             if (countCheck == 3)
                                             {
                                                 cnn.Open();
@@ -146,11 +122,6 @@ namespace SWEN
                                                 goto done;
                                             }
                                         }
-                                        //redo();
-                                        //goto done;
-                                        //}
-                                        //redo();
-                                        //goto done;
                                     }
                                     redo();
                                     goto done;
@@ -163,15 +134,6 @@ namespace SWEN
                         }
                         redo();
                         goto done;
-                        //}
-                        //redo();
-                        //goto done;
-                        //}
-                        //redo();
-                        //goto done;
-                        //}
-                        //redo();
-                        //goto done;
                     }
                     redo();
                     goto done;
@@ -213,7 +175,6 @@ namespace SWEN
                         comm.Parameters.AddWithValue("@bankno", bankAcc);
                         comm.Parameters.AddWithValue("@address", address);
                         comm.Parameters.AddWithValue("@telno", phoneNum);
-
                         comm.Parameters.AddWithValue("@housekeepingid", dutyID);
                         comm.Parameters.AddWithValue("@username", username);
 
