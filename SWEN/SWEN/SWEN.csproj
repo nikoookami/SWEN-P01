@@ -109,12 +109,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Report.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report.Designer.cs">
-      <DependentUpon>Report.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reports\GeneralReport.cs" />
     <Compile Include="Reports\GeneralReport.Designer.cs">
       <DependentUpon>GeneralReport.cs</DependentUpon>
@@ -127,7 +121,9 @@
     <Compile Include="Reports\OverviewReport.Designer.cs">
       <DependentUpon>OverviewReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\ReportMenu.cs" />
+    <Compile Include="Reports\ReportMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reports\ReportMenu.Designer.cs">
       <DependentUpon>ReportMenu.cs</DependentUpon>
     </Compile>
@@ -190,9 +186,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Report.resx">
-      <DependentUpon>Report.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reports\GeneralReport.resx">
       <DependentUpon>GeneralReport.cs</DependentUpon>
     </EmbeddedResource>

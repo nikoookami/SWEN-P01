@@ -34,6 +34,7 @@
             this.btnRoomOccupancy = new System.Windows.Forms.Button();
             this.btnGeneral = new System.Windows.Forms.Button();
             this.btnStatus = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -96,11 +97,22 @@
             this.btnStatus.UseVisualStyleBackColor = true;
             this.btnStatus.Click += new System.EventHandler(this.btnStatus_Click);
             // 
+            // btnHome
+            // 
+            this.btnHome.Location = new System.Drawing.Point(12, 9);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(75, 48);
+            this.btnHome.TabIndex = 7;
+            this.btnHome.Text = "Back to Home";
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
             // ReportMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(477, 417);
+            this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnStatus);
             this.Controls.Add(this.btnGeneral);
             this.Controls.Add(this.btnRoomOccupancy);
@@ -122,5 +134,6 @@
         private System.Windows.Forms.Button btnRoomOccupancy;
         private System.Windows.Forms.Button btnGeneral;
         private System.Windows.Forms.Button btnStatus;
+        private System.Windows.Forms.Button btnHome;
     }
 }
