@@ -60,6 +60,8 @@ namespace SWEN_Assignment_3.Booking
             toprint1 = DBManager.getGuestByID(toprint.GuestID);
             Room toprint2 = new Room();
             //toprint2 = DBManager;
+            
+            
             //n.addTableHeader("Invoice");
             n.addContent("Name: ", toprint1.Name);
             double totalalco = noofalco * pricealco;

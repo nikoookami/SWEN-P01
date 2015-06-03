@@ -181,6 +181,7 @@ namespace SWEN_Assignment_3.Classes
 
             try
             {
+                //
                 conn = new SqlConnection();
                 conn.ConnectionString = GSM_CONN_STR;
                 conn.Open();
