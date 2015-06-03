@@ -1,4 +1,4 @@
-﻿namespace Login.Booking
+﻿namespace SWEN.Booking
 {
     partial class Delete
     {
