@@ -71,6 +71,12 @@
     <Compile Include="Booking\CheckOut.Designer.cs">
       <DependentUpon>CheckOut.cs</DependentUpon>
     </Compile>
+    <Compile Include="Booking\Delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking\Delete.Designer.cs">
+      <DependentUpon>Delete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Booking\PrintInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Booking\CheckOut.resx">
       <DependentUpon>CheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Booking\Delete.resx">
+      <DependentUpon>Delete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Booking\PrintInvoice.resx">
       <DependentUpon>PrintInvoice.cs</DependentUpon>

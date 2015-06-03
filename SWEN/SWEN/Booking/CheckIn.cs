@@ -80,6 +80,14 @@ namespace SWEN_Assignment_3.Booking
 
                 
             }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new Delete();
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
         }
     }
 

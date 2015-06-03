@@ -1,6 +1,6 @@
-﻿namespace SWEN_Assignment_3
+﻿namespace Login.Booking
 {
-    partial class BookingMenu
+    partial class Delete
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.recordReservationMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkInMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkOutMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.recordReservationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -40,47 +40,44 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.recordReservationMenu,
-            this.checkInMenu,
-            this.checkOutMenu,
-            this.updateMenu,
+            this.recordReservationToolStripMenuItem,
+            this.checkInToolStripMenuItem,
+            this.checkOutToolStripMenuItem,
+            this.updateToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(428, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(394, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // recordReservationMenu
+            // recordReservationToolStripMenuItem
             // 
-            this.recordReservationMenu.BackColor = System.Drawing.Color.DarkMagenta;
-            this.recordReservationMenu.Name = "recordReservationMenu";
-            this.recordReservationMenu.Size = new System.Drawing.Size(120, 20);
-            this.recordReservationMenu.Text = "Record Reservation";
+            this.recordReservationToolStripMenuItem.BackColor = System.Drawing.Color.DarkMagenta;
+            this.recordReservationToolStripMenuItem.Name = "recordReservationToolStripMenuItem";
+            this.recordReservationToolStripMenuItem.Size = new System.Drawing.Size(120, 20);
+            this.recordReservationToolStripMenuItem.Text = "Record Reservation";
             // 
-            // checkInMenu
+            // checkInToolStripMenuItem
             // 
-            this.checkInMenu.BackColor = System.Drawing.Color.Violet;
-            this.checkInMenu.Name = "checkInMenu";
-            this.checkInMenu.Size = new System.Drawing.Size(67, 20);
-            this.checkInMenu.Text = "Check-In";
-            this.checkInMenu.Click += new System.EventHandler(this.checkInMenu_Click);
+            this.checkInToolStripMenuItem.BackColor = System.Drawing.Color.Violet;
+            this.checkInToolStripMenuItem.Name = "checkInToolStripMenuItem";
+            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.checkInToolStripMenuItem.Text = "Check-In";
             // 
-            // checkOutMenu
+            // checkOutToolStripMenuItem
             // 
-            this.checkOutMenu.BackColor = System.Drawing.Color.Turquoise;
-            this.checkOutMenu.Name = "checkOutMenu";
-            this.checkOutMenu.Size = new System.Drawing.Size(77, 20);
-            this.checkOutMenu.Text = "Check-Out";
-            this.checkOutMenu.Click += new System.EventHandler(this.checkOutMenu_Click);
+            this.checkOutToolStripMenuItem.BackColor = System.Drawing.Color.Turquoise;
+            this.checkOutToolStripMenuItem.Name = "checkOutToolStripMenuItem";
+            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.checkOutToolStripMenuItem.Text = "Check-Out";
             // 
-            // updateMenu
+            // updateToolStripMenuItem
             // 
-            this.updateMenu.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.updateMenu.Name = "updateMenu";
-            this.updateMenu.Size = new System.Drawing.Size(57, 20);
-            this.updateMenu.Text = "Update";
-            this.updateMenu.Click += new System.EventHandler(this.updateMenu_Click);
+            this.updateToolStripMenuItem.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.updateToolStripMenuItem.Text = "Update";
             // 
             // deleteToolStripMenuItem
             // 
@@ -89,17 +86,15 @@
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.deleteToolStripMenuItem.Text = "Delete";
             // 
-            // BookingMenu
+            // Delete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 261);
+            this.ClientSize = new System.Drawing.Size(394, 261);
             this.Controls.Add(this.menuStrip1);
-            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "BookingMenu";
-            this.Text = "Form1";
+            this.Name = "Delete";
+            this.Text = "Delete";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -110,11 +105,10 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem recordReservationMenu;
-        private System.Windows.Forms.ToolStripMenuItem checkInMenu;
-        private System.Windows.Forms.ToolStripMenuItem checkOutMenu;
-        private System.Windows.Forms.ToolStripMenuItem updateMenu;
+        private System.Windows.Forms.ToolStripMenuItem recordReservationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checkInToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checkOutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
     }
 }
-
