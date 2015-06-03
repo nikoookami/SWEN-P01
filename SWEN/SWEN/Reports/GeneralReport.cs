@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using HTMLReport;
 using System.IO;
+using Login.Classes;
 
 namespace SWEN_Assignment_3.Reports
 {
@@ -30,6 +31,9 @@ namespace SWEN_Assignment_3.Reports
             rm = RoomDBManager.getRoomByRn(tbxRoomNoSearch.Text);
             Book bk = new Book();
             bk = BookingDBManager.GetbookingByID(rm.bookingid);
+            Guest g =new Guest();
+            g = GuestDBManager.GetGuestByID(bk.guestid);
+
 
             string output = "";
 
@@ -40,10 +44,17 @@ namespace SWEN_Assignment_3.Reports
             string checkOutDateFormatted = cd1[0].ToString() + cd1[1].ToString() + "-" + cd1[2].ToString() + cd1[3].ToString() + "-" + cd1[4].ToString() + cd1[5].ToString() + cd1[6].ToString() + cd1[7].ToString();
             output += "Booking ID: " + Convert.ToString(bk.bookingid) + Environment.NewLine;
             output+= "Guest ID: " + Convert.ToString(bk.guestid) + Environment.NewLine;
+            output+= "Name: " + g.name +Environment.NewLine;
+            output += "Phone number: " + Convert.ToString(g.phone) + Environment.NewLine;
+            output += "Email: " + g.email + Environment.NewLine;
+            output += "Address: " + g.address + Environment.NewLine;
+            output += "Postal Code: " + Convert.ToString(g.postalcode)+ Environment.NewLine;
+            output += "Country: " + g.country + Environment.NewLine;
             output += "Check in date: " + checkInDateFormatted + Environment.NewLine;
             output += "Check out date: " + checkOutDateFormatted + Environment.NewLine;
             output += "Number of adults: " + Convert.ToString(bk.no_of_adults) + Environment.NewLine;
             output += "Number of children: " + Convert.ToString(bk.no_of_children) + Environment.NewLine;
+            output += "Payment Type: " + g.paymenttype + Environment.NewLine;
 
             rt.overrideHTML(output);
             wbOutput.DocumentText = rt.generateHTML(false);

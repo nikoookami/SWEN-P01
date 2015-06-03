@@ -68,6 +68,7 @@
     <Compile Include="Classes\Book.cs" />
     <Compile Include="Classes\BookingDBManager.cs" />
     <Compile Include="Classes\Guest.cs" />
+    <Compile Include="Classes\GuestDBManager.cs" />
     <Compile Include="Classes\Housekeeping.cs" />
     <Compile Include="Classes\HousekeepingDBManager.cs" />
     <Compile Include="Classes\Payment.cs" />
