@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBoxStaffName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,6 +50,11 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.delonixRegiaDataSet = new SWEN.DelonixRegiaDataSet();
+            this.housekeepingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.housekeepingTableAdapter = new SWEN.DelonixRegiaDataSetTableAdapters.HousekeepingTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.delonixRegiaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.housekeepingBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxStaffName
@@ -71,6 +77,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Enabled = false;
             this.label2.Location = new System.Drawing.Point(12, 145);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 13);
@@ -104,6 +111,7 @@
             // 
             // textBoxPostalCode
             // 
+            this.textBoxPostalCode.Enabled = false;
             this.textBoxPostalCode.Location = new System.Drawing.Point(105, 142);
             this.textBoxPostalCode.Name = "textBoxPostalCode";
             this.textBoxPostalCode.Size = new System.Drawing.Size(167, 20);
@@ -131,6 +139,7 @@
             // comboBoxStaffLevel
             // 
             this.comboBoxStaffLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxStaffLevel.Enabled = false;
             this.comboBoxStaffLevel.FormattingEnabled = true;
             this.comboBoxStaffLevel.Items.AddRange(new object[] {
             "Administration",
@@ -144,6 +153,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Enabled = false;
             this.label6.Location = new System.Drawing.Point(12, 223);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 13);
@@ -161,17 +171,15 @@
             // 
             // comboBoxDutyType
             // 
+            this.comboBoxDutyType.DataSource = this.housekeepingBindingSource;
+            this.comboBoxDutyType.DisplayMember = "housekeepingid";
             this.comboBoxDutyType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDutyType.FormattingEnabled = true;
-            this.comboBoxDutyType.Items.AddRange(new object[] {
-            "General maintenance",
-            "Room maintenance",
-            "Estate maintenance",
-            "Security"});
             this.comboBoxDutyType.Location = new System.Drawing.Point(105, 247);
             this.comboBoxDutyType.Name = "comboBoxDutyType";
             this.comboBoxDutyType.Size = new System.Drawing.Size(167, 21);
             this.comboBoxDutyType.TabIndex = 12;
+            this.comboBoxDutyType.ValueMember = "housekeepingid";
             // 
             // dateTimePickerDoB
             // 
@@ -212,6 +220,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Enabled = false;
             this.label9.Location = new System.Drawing.Point(12, 41);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 13);
@@ -220,6 +229,7 @@
             // 
             // textBoxPassword
             // 
+            this.textBoxPassword.Enabled = false;
             this.textBoxPassword.Location = new System.Drawing.Point(105, 38);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(167, 20);
@@ -242,6 +252,20 @@
             this.label10.Size = new System.Drawing.Size(75, 13);
             this.label10.TabIndex = 44;
             this.label10.Text = "Home address";
+            // 
+            // delonixRegiaDataSet
+            // 
+            this.delonixRegiaDataSet.DataSetName = "DelonixRegiaDataSet";
+            this.delonixRegiaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // housekeepingBindingSource
+            // 
+            this.housekeepingBindingSource.DataMember = "Housekeeping";
+            this.housekeepingBindingSource.DataSource = this.delonixRegiaDataSet;
+            // 
+            // housekeepingTableAdapter
+            // 
+            this.housekeepingTableAdapter.ClearBeforeFill = true;
             // 
             // AddStaff
             // 
@@ -272,6 +296,8 @@
             this.Name = "AddStaff";
             this.Text = "AddStaff";
             this.Load += new System.EventHandler(this.AddStaff_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.delonixRegiaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.housekeepingBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,5 +326,8 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.Label label10;
+        private DelonixRegiaDataSet delonixRegiaDataSet;
+        private System.Windows.Forms.BindingSource housekeepingBindingSource;
+        private DelonixRegiaDataSetTableAdapters.HousekeepingTableAdapter housekeepingTableAdapter;
     }
 }

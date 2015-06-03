@@ -24,6 +24,8 @@ namespace SWEN
 
         private void AddStaff_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'delonixRegiaDataSet.Housekeeping' table. You can move, or remove it, as needed.
+            this.housekeepingTableAdapter.Fill(this.delonixRegiaDataSet.Housekeeping);
         }
 
         private void btnAddStaff_Click(object sender, EventArgs e)
@@ -39,7 +41,7 @@ namespace SWEN
                 string phoneNum;
                 string bankAcc;
                 string staffLvl;
-                string dutyType;
+                string dutyID;
 
                 int countCheck = 0;
 
@@ -57,85 +59,98 @@ namespace SWEN
                         username = textBoxUserName.Text;
 
                         // Check PASSWORD
-                        if (!textBoxPassword.Text.Contains(" "))
+                        //if (!textBoxPassword.Text.Contains(" "))
+                        //{
+                        //countCheck++;
+                        //password = textBoxPassword.Text;
+
+                        // Check if POSTALCODE
+                        //if (textBoxPostalCode.Text.Length == 6)
+                        //{
+                        //    int intPostalCode;
+                        //    bool isNumeric = int.TryParse(textBoxPostalCode.Text, out intPostalCode);
+                        //    if (isNumeric)
+                        //    {
+                        //        countCheck++;
+                        //        postalCode = textBoxPostalCode.Text;
+
+                        // Check if PHONENUM
+                        if (textBoxPhone.Text.Length == 8)
                         {
-                            countCheck++;
-                            password = textBoxPassword.Text;
-
-                            // Check if POSTALCODE
-                            if (textBoxPostalCode.Text.Length == 6)
+                            int intPhoneNum;
+                            bool isNumeric2 = int.TryParse(textBoxPhone.Text, out intPhoneNum);
+                            if (isNumeric2)
                             {
-                                int intPostalCode;
-                                bool isNumeric = int.TryParse(textBoxPostalCode.Text, out intPostalCode);
-                                if (isNumeric)
-                                {
-                                    countCheck++;
-                                    postalCode = textBoxPostalCode.Text;
+                                countCheck++;
+                                phoneNum = textBoxPhone.Text;
 
-                                    // Check if PHONENUM
-                                    if (textBoxPhone.Text.Length == 8)
+                                // Check BANKACC
+                                if (textBoxBankAcc.Text.Length == 9 || textBoxBankAcc.Text.Length == 10)
+                                {
+                                    int intBankAcc;
+                                    bool isNumeric3 = int.TryParse(textBoxBankAcc.Text, out intBankAcc);
+                                    if (isNumeric3)
                                     {
-                                        int intPhoneNum;
-                                        bool isNumeric2 = int.TryParse(textBoxPhone.Text, out intPhoneNum);
-                                        if (isNumeric2)
+                                        countCheck++;
+                                        bankAcc = textBoxBankAcc.Text;
+
+                                        // Check STAFFLVL
+                                        //if (comboBoxStaffLevel.SelectedItem != null)
+                                        //{
+                                        //    countCheck++;
+                                        //    staffLvl = comboBoxStaffLevel.Text;
+
+                                        // Check DUTYTYPE
+                                        if (comboBoxDutyType.SelectedItem != null)
                                         {
                                             countCheck++;
-                                            phoneNum = textBoxPhone.Text;
+                                            dutyID = comboBoxDutyType.Text;
 
-                                            // Check BANKACC
-                                            if (textBoxBankAcc.Text.Length == 9 || textBoxBankAcc.Text.Length == 10)
+                                            // If all correct update Database                    
+                                            if (countCheck == 4)
                                             {
-                                                int intBankAcc;
-                                                bool isNumeric3 = int.TryParse(textBoxBankAcc.Text, out intBankAcc);
-                                                if (isNumeric3)
-                                                {
-                                                    countCheck++;
-                                                    bankAcc = textBoxBankAcc.Text;
+                                                cnn.Open();
 
-                                                    // Check STAFFLVL
-                                                    if (comboBoxStaffLevel.SelectedItem != null)
-                                                    {
-                                                        countCheck++;
-                                                        staffLvl = comboBoxStaffLevel.Text;
+                                                bool success = doSomeWork(username, staffName, dob, address, phoneNum, bankAcc, dutyID);
 
-                                                        // Check DUTYTYPE
-                                                        if (comboBoxDutyType.SelectedItem != null)
-                                                        {
-                                                            countCheck++;
-                                                            dutyType = comboBoxDutyType.Text;
+                                                cnn.Close();
 
-                                                            // If all correct update Database                    
-                                                            if (countCheck == 7)
-                                                            {
-                                                                cnn.Open();
-
-                                                                bool success = doSomeWork(username, password, staffName, dob, address, postalCode, phoneNum, bankAcc, staffLvl, dutyType);
-
-                                                                cnn.Close();
-
-                                                                this.Close();
-                                                                goto done;
-                                                            }
-                                                            else
-                                                            {
-                                                                redo();
-                                                                goto done;
-                                                            }
-                                                        }
-                                                        redo();
-                                                        goto done;
-                                                    }
-                                                    redo();
-                                                    goto done;
-                                                }
+                                                this.Close();
+                                                goto done;
+                                            }
+                                            else
+                                            {
                                                 redo();
                                                 goto done;
                                             }
-                                            redo();
-                                            goto done;
                                         }
-                                        redo();
-                                        goto done;
+                                        else
+                                        {
+                                            //dutyID = comboBoxDutyType.Text;
+
+                                            // If all correct update Database                    
+                                            if (countCheck == 3)
+                                            {
+                                                cnn.Open();
+
+                                                bool success = doSomeWork(username, staffName, dob, address, phoneNum, bankAcc, null);
+
+                                                cnn.Close();
+
+                                                this.Close();
+                                                goto done;
+                                            }
+                                            else
+                                            {
+                                                redo();
+                                                goto done;
+                                            }
+                                        }
+                                        //redo();
+                                        //goto done;
+                                        //}
+                                        //redo();
+                                        //goto done;
                                     }
                                     redo();
                                     goto done;
@@ -148,6 +163,15 @@ namespace SWEN
                         }
                         redo();
                         goto done;
+                        //}
+                        //redo();
+                        //goto done;
+                        //}
+                        //redo();
+                        //goto done;
+                        //}
+                        //redo();
+                        //goto done;
                     }
                     redo();
                     goto done;
@@ -169,32 +193,58 @@ namespace SWEN
             Hide();
             Close();
         }
-        private bool doSomeWork(string username, string password, string staffName, DateTime dob, string address, string postalCode, string phoneNum, string bankAcc, string staffLvl, string dutyType)
+        private bool doSomeWork(string username, string staffName, DateTime dob, string address, string phoneNum, string bankAcc, string dutyID)
         {
             bool successOrNot = false;
             try
             {
-                string cmdString = "INSERT INTO Staff (staffUsername,staffPassword,staffName,staffBirthDate," +
-                    "staffAddress,staffPostalCode,staffPhoneNo,staffBankAccNo,dutyId)" +
-                " VALUES (@valSatffUsername, @valStaffPassword,@valStaffName,@valStaffBirthDate,@valStaffAddress,@valStaffPostalCode,@valStaffPhoneNo," +
-                "@valStaffBankAccNo,@valDutyId)";
-                using (SqlCommand comm = new SqlCommand())
+                if (dutyID != null)
                 {
-                    comm.Connection = cnn;
-                    comm.CommandText = cmdString;
-                    comm.Parameters.AddWithValue("@valSatffUsername", username);
-                    comm.Parameters.AddWithValue("@valStaffPassword", password);
-                    comm.Parameters.AddWithValue("@valStaffName", staffName);
-                    comm.Parameters.AddWithValue("@valStaffBirthDate", dob);
-                    comm.Parameters.AddWithValue("@valStaffAddress", address);
-                    comm.Parameters.AddWithValue("@valStaffPostalCode", postalCode);
-                    comm.Parameters.AddWithValue("@valStaffPhoneNo", phoneNum);
-                    comm.Parameters.AddWithValue("@valStaffBankAccNo", bankAcc);
-                    comm.Parameters.AddWithValue("@valDutyId", dutyType);
+                    string cmdString = "INSERT INTO Staff (name,dob,bankno,address," +
+                        "telno,housekeepingid,username)" +
+                        " VALUES (@name, @dob,@bankno,@address," +
+                        "@telno,@housekeepingid,@username)";
+                    using (SqlCommand comm = new SqlCommand())
+                    {
+                        comm.Connection = cnn;
+                        comm.CommandText = cmdString;
+                        comm.Parameters.AddWithValue("@name", staffName);
+                        comm.Parameters.AddWithValue("@dob", dob);
+                        comm.Parameters.AddWithValue("@bankno", bankAcc);
+                        comm.Parameters.AddWithValue("@address", address);
+                        comm.Parameters.AddWithValue("@telno", phoneNum);
 
-                    comm.ExecuteNonQuery();
-                    // Check Success
-                    successOrNot = true;
+                        comm.Parameters.AddWithValue("@housekeepingid", dutyID);
+                        comm.Parameters.AddWithValue("@username", username);
+
+                        comm.ExecuteNonQuery();
+                        // Check Success
+                        successOrNot = true;
+
+                    }
+                }
+                else
+                {
+                    string cmdString = "INSERT INTO Staff (name,dob,bankno,address," +
+                        "telno,username)" +
+                        " VALUES (@name, @dob,@bankno,@address," +
+                        "@telno,@username)";
+                    using (SqlCommand comm = new SqlCommand())
+                    {
+                        comm.Connection = cnn;
+                        comm.CommandText = cmdString;
+                        comm.Parameters.AddWithValue("@name", staffName);
+                        comm.Parameters.AddWithValue("@dob", dob);
+                        comm.Parameters.AddWithValue("@bankno", bankAcc);
+                        comm.Parameters.AddWithValue("@address", address);
+                        comm.Parameters.AddWithValue("@telno", phoneNum);
+                        comm.Parameters.AddWithValue("@username", username);
+
+                        comm.ExecuteNonQuery();
+                        // Check Success
+                        successOrNot = true;
+
+                    }
                 }
             }
             catch (Exception e)
