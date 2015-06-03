@@ -10,19 +10,25 @@ using System.Windows.Forms;
 
 namespace SWEN
 {
-    public partial class Login : Form
+    public partial class Report : Form
     {
-        public Login()
+        public Report()
         {
             InitializeComponent();
         }
 
-        private void buttonLogin_Click(object sender, EventArgs e)
+        private void buttonBackToHome_Click(object sender, EventArgs e)
         {
             this.Hide();
             var form = new Home();
             form.Closed += (s, args) => this.Close();
             form.Show();
+        }
+
+        private void Report_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
         }
     }
 }
