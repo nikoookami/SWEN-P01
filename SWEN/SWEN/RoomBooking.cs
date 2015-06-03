@@ -58,5 +58,10 @@ namespace Login
             form.Show();
 
         }
+
+        private void RoomBooking_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = DataBase.GetAllInfo();
+        }
     }
 }

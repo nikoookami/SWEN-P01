@@ -22,29 +22,29 @@ namespace Login
             get { return checkout; }
             set { checkout = value; }
         }
-        private int noOfRoom;
+        private string noOfRoom;
 
-        public int NoOfRoom
+        public string NoOfRoom
         {
             get { return noOfRoom; }
             set { noOfRoom = value; }
         }
-        private int noOfAdult;
+        private string noOfAdult;
 
-        public int NoOfAdult
+        public string NoOfAdult
         {
             get { return noOfAdult; }
             set { noOfAdult = value; }
         }
-        private int noOfChildren;
+        private string noOfChildren;
 
-        public int NoOfChildren
+        public string NoOfChildren
         {
             get { return noOfChildren; }
             set { noOfChildren = value; }
         }
 
-        public booking(string checkin, string checkout, int noofroom, int noofadult, int noofchildren  )
+        public booking(string checkin, string checkout, string noofroom, string noofadult, string noofchildren  )
         {
             this.checkin = checkin;
             this.checkout = checkout;

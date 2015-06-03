@@ -34,14 +34,14 @@
             this.button4 = new System.Windows.Forms.Button();
             this.buttonBackToHome = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.BookingID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+       /*     this.BookingID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CheckInDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GuestName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BedType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Country = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Country = new System.Windows.Forms.DataGridViewTextBoxColumn();*/
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,7 +100,7 @@
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+         /*   this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BookingID,
             this.CheckInDate,
             this.GuestName,
@@ -108,7 +108,7 @@
             this.Email,
             this.RoomNo,
             this.BedType,
-            this.Country});
+            this.Country});*/
             this.dataGridView1.Location = new System.Drawing.Point(158, 41);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(664, 280);
@@ -116,43 +116,43 @@
             // 
             // BookingID
             // 
-            this.BookingID.HeaderText = "Booking ID";
-            this.BookingID.Name = "BookingID";
+      //      this.BookingID.HeaderText = "Booking ID";
+          //  this.BookingID.Name = "BookingID";
             // 
             // CheckInDate
             // 
-            this.CheckInDate.HeaderText = "Check-in Date";
-            this.CheckInDate.Name = "CheckInDate";
+         //   this.CheckInDate.HeaderText = "Check-in Date";
+         //   this.CheckInDate.Name = "CheckInDate";
             // 
             // GuestName
             // 
-            this.GuestName.HeaderText = "Guest Name";
-            this.GuestName.Name = "GuestName";
-            // 
+          //  this.GuestName.HeaderText = "Guest Name";
+          //  this.GuestName.Name = "GuestName";
+          //  // 
             // Phone
             // 
-            this.Phone.HeaderText = "Phone No.";
-            this.Phone.Name = "Phone";
+         //   this.Phone.HeaderText = "Phone No.";
+           // this.Phone.Name = "Phone";
             // 
             // Email
             // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
+          //  this.Email.HeaderText = "Email";
+        //    this.Email.Name = "Email";
             // 
             // RoomNo
             // 
-            this.RoomNo.HeaderText = "Room No.";
-            this.RoomNo.Name = "RoomNo";
+          //  this.RoomNo.HeaderText = "Room No.";
+          //  this.RoomNo.Name = "RoomNo";
             // 
             // BedType
             // 
-            this.BedType.HeaderText = "Bed Type";
-            this.BedType.Name = "BedType";
+          //  this.BedType.HeaderText = "Bed Type";
+          //  this.BedType.Name = "BedType";
             // 
             // Country
             // 
-            this.Country.HeaderText = "Country";
-            this.Country.Name = "Country";
+           // this.Country.HeaderText = "Country";
+          //  this.Country.Name = "Country";
             // 
             // RoomBooking
             // 
@@ -167,6 +167,7 @@
             this.Controls.Add(this.button1);
             this.Name = "RoomBooking";
             this.Text = "RoomBooking";
+            this.Load += new System.EventHandler(this.RoomBooking_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -180,13 +181,13 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button buttonBackToHome;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BookingID;
+    /*  private System.Windows.Forms.DataGridViewTextBoxColumn BookingID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CheckInDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn GuestName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn RoomNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn BedType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Country;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Country;*/
     }
 }

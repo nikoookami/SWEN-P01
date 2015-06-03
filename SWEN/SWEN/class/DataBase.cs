@@ -13,7 +13,7 @@ namespace Login
     {
         private const string GSM_CONN_STR = "data source=.\\SQLEXPRESS;initial catalog=DelonixRegia;integrated security=true;";
 
-        public static bool InsertProductID(booking u)
+        public static bool Insertbookinfo(booking u)
         {
             bool result = false;
             SqlConnection conn = new SqlConnection();
@@ -53,6 +53,38 @@ namespace Login
                 }
             }
             return result;
+        }
+        public static ArrayList GetAllInfo()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand comm = new SqlCommand();
+            ArrayList products = new ArrayList();
+            try
+            {
+                conn.ConnectionString = GSM_CONN_STR;
+                conn.Open();
+                comm.Connection = conn;
+                comm.CommandText = "SELECT * from Booking ";
+                SqlDataReader dr = comm.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    booking p = new booking(dr["check_in_date"].ToString(), dr["check_out_date"].ToString(), dr["no_of_rooms"].ToString(), dr["no_of_adults"].ToString(), dr["no_of_children"].ToString());
+                    products.Add(p);
+                }
+
+                dr.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return products;
+
         }
     }
 }
