@@ -109,12 +109,6 @@
     <Compile Include="UpdateBooking.Designer.cs">
       <DependentUpon>UpdateBooking.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateStaff.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdateStaff.Designer.cs">
-      <DependentUpon>UpdateStaff.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AddStaff.resx">
       <DependentUpon>AddStaff.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,9 +148,6 @@
     <EmbeddedResource Include="UpdateBooking.resx">
       <DependentUpon>UpdateBooking.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateStaff.resx">
-      <DependentUpon>UpdateStaff.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -175,6 +166,9 @@
       <Project>{25649F08-3046-4891-ADB8-7EA787B57063}</Project>
       <Name>System.Windows.Forms.Calendar</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
