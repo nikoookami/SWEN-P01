@@ -115,6 +115,30 @@
     <Compile Include="Report.Designer.cs">
       <DependentUpon>Report.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\GeneralReport.cs" />
+    <Compile Include="Reports\GeneralReport.Designer.cs">
+      <DependentUpon>GeneralReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\HousekeepingReport.cs" />
+    <Compile Include="Reports\HousekeepingReport.Designer.cs">
+      <DependentUpon>HousekeepingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\OverviewReport.cs" />
+    <Compile Include="Reports\OverviewReport.Designer.cs">
+      <DependentUpon>OverviewReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportMenu.cs" />
+    <Compile Include="Reports\ReportMenu.Designer.cs">
+      <DependentUpon>ReportMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RoomOccupancyReport.cs" />
+    <Compile Include="Reports\RoomOccupancyReport.Designer.cs">
+      <DependentUpon>RoomOccupancyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RoomStatusReport.cs" />
+    <Compile Include="Reports\RoomStatusReport.Designer.cs">
+      <DependentUpon>RoomStatusReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reservation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +192,24 @@
     </Compile>
     <EmbeddedResource Include="Report.resx">
       <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GeneralReport.resx">
+      <DependentUpon>GeneralReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\HousekeepingReport.resx">
+      <DependentUpon>HousekeepingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\OverviewReport.resx">
+      <DependentUpon>OverviewReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportMenu.resx">
+      <DependentUpon>ReportMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RoomOccupancyReport.resx">
+      <DependentUpon>RoomOccupancyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RoomStatusReport.resx">
+      <DependentUpon>RoomStatusReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reservation.resx">
       <DependentUpon>Reservation.cs</DependentUpon>
