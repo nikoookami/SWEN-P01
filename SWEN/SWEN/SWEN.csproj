@@ -65,6 +65,21 @@
     <Compile Include="Checkout.Designer.cs">
       <DependentUpon>Checkout.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Book.cs" />
+    <Compile Include="Classes\BookingDBManager.cs" />
+    <Compile Include="Classes\Guest.cs" />
+    <Compile Include="Classes\Housekeeping.cs" />
+    <Compile Include="Classes\HousekeepingDBManager.cs" />
+    <Compile Include="Classes\Payment.cs" />
+    <Compile Include="Classes\Reports\General.cs" />
+    <Compile Include="Classes\Reports\HKReport.cs" />
+    <Compile Include="Classes\Reports\Overview.cs" />
+    <Compile Include="Classes\Reports\Room.cs" />
+    <Compile Include="Classes\Reports\RoomOccupancy.cs" />
+    <Compile Include="Classes\Room.cs" />
+    <Compile Include="Classes\RoomDBManager.cs" />
+    <Compile Include="Classes\Staff.cs" />
+    <Compile Include="Classes\UserAccount.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
