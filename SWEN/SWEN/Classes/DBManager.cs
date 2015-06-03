@@ -415,5 +415,11 @@ namespace SWEN_Assignment_3.Classes
             r.AddData("status", "occupied");
             return r.RunQuery();
         }
+        public static Boolean deleteBooking(int bookingid)
+        {
+            DatabaseDeleteQuery r = new DatabaseDeleteQuery("Booking","booking="+bookingid);
+            return r.RunQuery();
+
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SWEN_Assignment_3.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,19 @@ namespace Login.Booking
         public Delete()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(DBManager.deleteBooking(Convert.ToInt32(textBox1.Text))==true)
+            {
+                MessageBox.Show("Booking Successfully Deleted!");
+            }
+            else
+            {
+                MessageBox.Show("Booking Was Not Deleted! Please Try Again!");
+            }
+
         }
     }
 }
