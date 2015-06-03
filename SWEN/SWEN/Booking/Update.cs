@@ -1,4 +1,6 @@
-﻿using SWEN_Assignment_3.Classes;
+﻿using Login;
+using Login.Booking;
+using SWEN_Assignment_3.Classes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -114,6 +116,22 @@ namespace SWEN_Assignment_3.Booking
                
           
 
+        }
+
+        private void mainMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new Home();
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new Delete();
+            form.Closed += (s, args) => this.Close();
+            form.Show();
         }
         }
 

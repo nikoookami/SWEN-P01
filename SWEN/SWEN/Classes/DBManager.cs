@@ -417,7 +417,7 @@ namespace SWEN_Assignment_3.Classes
         }
         public static Boolean deleteBooking(int bookingid)
         {
-            DatabaseDeleteQuery r = new DatabaseDeleteQuery("Booking","booking="+bookingid);
+            DatabaseDeleteQuery r = new DatabaseDeleteQuery("Booking","bookingid="+bookingid);
             return r.RunQuery();
 
         }
