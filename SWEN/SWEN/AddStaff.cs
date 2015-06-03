@@ -14,7 +14,7 @@ namespace SWEN
     public partial class AddStaff : Form
     {
 
-        public static string connectionString = "Server=SIRIUS;Database=swen;User ID=bspiSCM;password=Nikoookami02";
+        public static string connectionString = "Server=SIRIUS;Database=DelonixRegia;User ID=bspiSCM;password=Nikoookami02";
         public static SqlConnection cnn = new SqlConnection(connectionString);
 
         public AddStaff()

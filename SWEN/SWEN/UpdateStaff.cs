@@ -28,27 +28,32 @@ namespace SWEN
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            SqlConnection cnn = new SqlConnection("Server=SIRIUS;Database=DelonixRegia;User ID=bspiSCM;password=Nikoookami02");
-            SqlCommand updateCommand = new SqlCommand("UPDATE Staff SET " +
-"name= @name, dob= @dob, bankno = @bankno, address = @address,telno= @telno, username=@username WHERE staffid= @staffid");
-            cnn.Open();
-            updateCommand.Connection = cnn;
-            updateCommand.Parameters.AddWithValue("@name", textBoxStaffName.Text);
-            updateCommand.Parameters.AddWithValue("@dob", dateTimePickerDoB.Value);
-            updateCommand.Parameters.AddWithValue("@bankno", textBoxBankAcc.Text);
-            updateCommand.Parameters.AddWithValue("@address", textBoxAddress.Text);
-            updateCommand.Parameters.AddWithValue("@telno", textBoxTelno.Text);
-            updateCommand.Parameters.AddWithValue("@username", textBoxUsername.Text);
-            updateCommand.Parameters.AddWithValue("@staffid", comboBoxSelectStaffID.SelectedValue.ToString());
+            try
+            {
+                SqlConnection cnn = new SqlConnection("Server=SIRIUS;Database=DelonixRegia;User ID=bspiSCM;password=Nikoookami02");
+                SqlCommand updateCommand = new SqlCommand("UPDATE Staff SET " +
+    "name= @name, dob= @dob, bankno = @bankno, address = @address,telno= @telno, username=@username WHERE staffid= @staffid");
+                cnn.Open();
+                updateCommand.Connection = cnn;
+                updateCommand.Parameters.AddWithValue("@name", textBoxStaffName.Text);
+                updateCommand.Parameters.AddWithValue("@dob", dateTimePickerDoB.Value);
+                updateCommand.Parameters.AddWithValue("@bankno", textBoxBankAcc.Text);
+                updateCommand.Parameters.AddWithValue("@address", textBoxAddress.Text);
+                updateCommand.Parameters.AddWithValue("@telno", textBoxTelno.Text);
+                updateCommand.Parameters.AddWithValue("@username", textBoxUsername.Text);
+                updateCommand.Parameters.AddWithValue("@staffid", comboBoxSelectStaffID.SelectedValue.ToString());
 
-            updateCommand.ExecuteNonQuery();
-            cnn.Close();
-            // Check Success
-            //successOrNot = true;
-
-
+                updateCommand.ExecuteNonQuery();
+                cnn.Close();
+                // Check Success
+                //successOrNot = true;
+                MessageBox.Show("Done!");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error!" + Environment.NewLine + e.ToString());
+            }
         }
-
 
         private void comboBoxSelectStaffID_SelectionChangeCommitted(object sender, EventArgs e)
         {
