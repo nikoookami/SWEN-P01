@@ -53,6 +53,42 @@
     <Compile Include="AddStaff.Designer.cs">
       <DependentUpon>AddStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="Booking\BookingMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking\BookingMenu.Designer.cs">
+      <DependentUpon>BookingMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Booking\CheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking\CheckIn.Designer.cs">
+      <DependentUpon>CheckIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Booking\CheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking\CheckOut.Designer.cs">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Booking\Delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking\Delete.Designer.cs">
+      <DependentUpon>Delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Booking\PrintInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking\PrintInvoice.Designer.cs">
+      <DependentUpon>PrintInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Booking\Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking\Update.Designer.cs">
+      <DependentUpon>Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Checkin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,20 +102,30 @@
       <DependentUpon>Checkout.cs</DependentUpon>
     </Compile>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="Classes\Book.cs" />
     <Compile Include="Classes\BookingDBManager.cs" />
     <Compile Include="Classes\Guest.cs" />
     <Compile Include="Classes\GuestDBManager.cs" />
     <Compile Include="Classes\Housekeeping.cs" />
     <Compile Include="Classes\HousekeepingDBManager.cs" />
+=======
+    <Compile Include="Classes\BOOK.cs" />
+    <Compile Include="Classes\Booking.cs" />
+    <Compile Include="Classes\DBManager.cs" />
+    <Compile Include="Classes\Guest.cs" />
+>>>>>>> origin/ChengKai
     <Compile Include="Classes\Payment.cs" />
     <Compile Include="Classes\Reports\General.cs" />
     <Compile Include="Classes\Reports\HKReport.cs" />
     <Compile Include="Classes\Reports\Overview.cs" />
     <Compile Include="Classes\Reports\Room.cs" />
     <Compile Include="Classes\Reports\RoomOccupancy.cs" />
+<<<<<<< HEAD
     <Compile Include="Classes\Room.cs" />
     <Compile Include="Classes\RoomDBManager.cs" />
+=======
+>>>>>>> origin/ChengKai
     <Compile Include="Classes\Staff.cs" />
     <Compile Include="Classes\UserAccount.cs" />
     <Compile Include="DatabaseHelper\DatabaseConnectionString.cs" />
@@ -89,6 +135,7 @@
     <Compile Include="DatabaseHelper\DatabaseInsertQuery.cs" />
     <Compile Include="DatabaseHelper\DatabaseRetrieveQuery.cs" />
     <Compile Include="DatabaseHelper\DatabaseUpdateQuery.cs" />
+<<<<<<< HEAD
 =======
     <Compile Include="CreateShift.cs">
       <SubType>Form</SubType>
@@ -108,6 +155,8 @@
       <DependentUpon>DelonixRegiaDataSet.xsd</DependentUpon>
     </Compile>
 >>>>>>> origin/Thanh
+=======
+>>>>>>> origin/ChengKai
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +233,7 @@
     <Compile Include="UpdateBooking.Designer.cs">
       <DependentUpon>UpdateBooking.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="UpdateShift.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,8 +246,28 @@
     <Compile Include="UpdateStaff.Designer.cs">
       <DependentUpon>UpdateStaff.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> origin/ChengKai
     <EmbeddedResource Include="AddStaff.resx">
       <DependentUpon>AddStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Booking\BookingMenu.resx">
+      <DependentUpon>BookingMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Booking\CheckIn.resx">
+      <DependentUpon>CheckIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Booking\CheckOut.resx">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Booking\Delete.resx">
+      <DependentUpon>Delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Booking\PrintInvoice.resx">
+      <DependentUpon>PrintInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Booking\Update.resx">
+      <DependentUpon>Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Checkin.resx">
       <DependentUpon>Checkin.cs</DependentUpon>
@@ -257,6 +327,7 @@
     <EmbeddedResource Include="UpdateBooking.resx">
       <DependentUpon>UpdateBooking.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="UpdateShift.resx">
       <DependentUpon>UpdateShift.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,6 +345,8 @@
     <None Include="DelonixRegiaDataSet.xss">
       <DependentUpon>DelonixRegiaDataSet.xsd</DependentUpon>
     </None>
+=======
+>>>>>>> origin/ChengKai
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

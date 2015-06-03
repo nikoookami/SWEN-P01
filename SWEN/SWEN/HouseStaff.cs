@@ -63,10 +63,10 @@ namespace SWEN
 
         private void buttonUpdateStaff_Click(object sender, EventArgs e)
         {
-            //this.Hide();
-            var form = new UpdateStaff();
+            this.Hide();
+            ///var form = new UpdateStaff();
             //form.Closed += (s, args) => this.Close();
-            form.Show();
+            //form.Show();
         }
 
         private void buttonCancelShift_Click(object sender, EventArgs e)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SWEN_Assignment_3.Classes
 {
-    class BOOK
+    class Booking
     {
         private int bookingid;
         private String check_in_date;

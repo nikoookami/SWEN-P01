@@ -11,7 +11,10 @@ namespace HTMLReport
     {
         public ArrayList tableHeader { get; set; }
         public ArrayList tableBody { get; set; }
+<<<<<<< HEAD
         public string preCode { get; set; }
+=======
+>>>>>>> origin/ChengKai
         public ArrayList cssRef { get; set; }
         public string reportHeader { get; set; }
 
@@ -21,12 +24,15 @@ namespace HTMLReport
             tableHeader = new ArrayList();
             tableBody = new ArrayList();
             cssRef = new ArrayList();
+<<<<<<< HEAD
             preCode = "";
         }
 
         public void overrideHTML(string str)
         {
             preCode = str;
+=======
+>>>>>>> origin/ChengKai
         }
 
         public void addTableHeader(string header)
@@ -67,7 +73,11 @@ namespace HTMLReport
             tableBody.Add(tableLine);
         }
 
+<<<<<<< HEAD
         public string geneateTable()
+=======
+        public string generateTable()
+>>>>>>> origin/ChengKai
         {
             string output = "";
             
@@ -130,6 +140,7 @@ namespace HTMLReport
 
             output += "<body>";
             output += "<div class=\"report-header\">"+reportHeader+"</div>";
+<<<<<<< HEAD
             if (preCode != "")
             {
                 output += "<pre>";
@@ -141,6 +152,9 @@ namespace HTMLReport
                 output += geneateTable();
             }
             
+=======
+            output += generateTable();
+>>>>>>> origin/ChengKai
             output += "</body>";
 
             output += "</html>";

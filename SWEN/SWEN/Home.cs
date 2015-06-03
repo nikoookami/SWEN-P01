@@ -8,7 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 
+=======
+using HTMLReport;
+using System.IO;
+using SWEN_Assignment_3.Classes;
+using SWEN_Assignment_3.Classes.Reports;
+using SWEN_Assignment_3;
+>>>>>>> origin/ChengKai
 namespace SWEN
 {
     public partial class Home : Form
@@ -29,7 +37,7 @@ namespace SWEN
         private void buttonRoomBooking_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form = new RoomBooking();
+            var form = new BookingMenu();
             form.Closed += (s, args) => this.Close();
             form.Show();
         }
