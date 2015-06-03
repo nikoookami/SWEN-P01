@@ -443,7 +443,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "UpdateBooking";
-            this.Text = "UpdateBooking";
+            this.Text = "Update Booking";
             this.ResumeLayout(false);
             this.PerformLayout();
 

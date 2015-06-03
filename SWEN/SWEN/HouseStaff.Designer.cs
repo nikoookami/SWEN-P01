@@ -51,6 +51,8 @@
             this.StaffName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button4 = new System.Windows.Forms.Button();
             this.calendar1 = new System.Windows.Forms.Calendar.Calendar();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonBackToHome
@@ -66,7 +68,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 128);
+            this.button3.Location = new System.Drawing.Point(12, 157);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(140, 23);
             this.button3.TabIndex = 8;
@@ -75,7 +77,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 99);
+            this.button2.Location = new System.Drawing.Point(12, 128);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 23);
             this.button2.TabIndex = 7;
@@ -84,7 +86,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 41);
+            this.button1.Location = new System.Drawing.Point(12, 70);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 23);
             this.button1.TabIndex = 6;
@@ -105,10 +107,11 @@
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1,
             listViewItem2});
-            this.listView1.Location = new System.Drawing.Point(158, 41);
+            this.listView1.Location = new System.Drawing.Point(158, 70);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(281, 434);
+            this.listView1.Size = new System.Drawing.Size(281, 405);
             this.listView1.TabIndex = 9;
+            this.listView1.TileSize = new System.Drawing.Size(1, 1);
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
@@ -119,14 +122,16 @@
             // StaffUsername
             // 
             this.StaffUsername.Text = "Staff Username";
+            this.StaffUsername.Width = 100;
             // 
             // StaffName
             // 
             this.StaffName.Text = "Staff Name";
+            this.StaffName.Width = 120;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(12, 70);
+            this.button4.Location = new System.Drawing.Point(12, 99);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(140, 23);
             this.button4.TabIndex = 12;
@@ -158,17 +163,39 @@
         calendarHighlightRange3,
         calendarHighlightRange4,
         calendarHighlightRange5};
-            this.calendar1.Location = new System.Drawing.Point(446, 41);
+            this.calendar1.Location = new System.Drawing.Point(446, 70);
             this.calendar1.Name = "calendar1";
-            this.calendar1.Size = new System.Drawing.Size(480, 434);
+            this.calendar1.Size = new System.Drawing.Size(480, 405);
             this.calendar1.TabIndex = 13;
             this.calendar1.Text = "calendar1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(262, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 24);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Staff List";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(644, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(128, 24);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Shift schedule";
             // 
             // HouseStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(938, 487);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.calendar1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.listView1);
@@ -177,8 +204,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonBackToHome);
             this.Name = "HouseStaff";
-            this.Text = "HouseStaff";
+            this.Text = "Housekeeping and Staff management";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -194,5 +222,7 @@
         private System.Windows.Forms.ColumnHeader StaffUsername;
         private System.Windows.Forms.ColumnHeader StaffName;
         private System.Windows.Forms.Calendar.Calendar calendar1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
