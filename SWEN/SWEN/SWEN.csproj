@@ -65,6 +65,29 @@
     <Compile Include="Checkout.Designer.cs">
       <DependentUpon>Checkout.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Book.cs" />
+    <Compile Include="Classes\BookingDBManager.cs" />
+    <Compile Include="Classes\Guest.cs" />
+    <Compile Include="Classes\GuestDBManager.cs" />
+    <Compile Include="Classes\Housekeeping.cs" />
+    <Compile Include="Classes\HousekeepingDBManager.cs" />
+    <Compile Include="Classes\Payment.cs" />
+    <Compile Include="Classes\Reports\General.cs" />
+    <Compile Include="Classes\Reports\HKReport.cs" />
+    <Compile Include="Classes\Reports\Overview.cs" />
+    <Compile Include="Classes\Reports\Room.cs" />
+    <Compile Include="Classes\Reports\RoomOccupancy.cs" />
+    <Compile Include="Classes\Room.cs" />
+    <Compile Include="Classes\RoomDBManager.cs" />
+    <Compile Include="Classes\Staff.cs" />
+    <Compile Include="Classes\UserAccount.cs" />
+    <Compile Include="DatabaseHelper\DatabaseConnectionString.cs" />
+    <Compile Include="DatabaseHelper\DatabaseDeleteQuery.cs" />
+    <Compile Include="DatabaseHelper\DatabaseHelperMain.cs" />
+    <Compile Include="DatabaseHelper\DatabaseHelperSettings.cs" />
+    <Compile Include="DatabaseHelper\DatabaseInsertQuery.cs" />
+    <Compile Include="DatabaseHelper\DatabaseRetrieveQuery.cs" />
+    <Compile Include="DatabaseHelper\DatabaseUpdateQuery.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +100,8 @@
     <Compile Include="HouseStaff.Designer.cs">
       <DependentUpon>HouseStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="HTMLReport\HTMLReport.cs" />
+    <Compile Include="HTMLReport\HTMLReportTableNormal.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,11 +110,41 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Report.cs">
+    <Compile Include="Reports\GeneralReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Report.Designer.cs">
-      <DependentUpon>Report.cs</DependentUpon>
+    <Compile Include="Reports\GeneralReport.Designer.cs">
+      <DependentUpon>GeneralReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\HousekeepingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\HousekeepingReport.Designer.cs">
+      <DependentUpon>HousekeepingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\OverviewReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\OverviewReport.Designer.cs">
+      <DependentUpon>OverviewReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportMenu.Designer.cs">
+      <DependentUpon>ReportMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RoomOccupancyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RoomOccupancyReport.Designer.cs">
+      <DependentUpon>RoomOccupancyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RoomStatusReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RoomStatusReport.Designer.cs">
+      <DependentUpon>RoomStatusReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Reservation.cs">
       <SubType>Form</SubType>
@@ -142,8 +197,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Report.resx">
-      <DependentUpon>Report.cs</DependentUpon>
+    <EmbeddedResource Include="Reports\GeneralReport.resx">
+      <DependentUpon>GeneralReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\HousekeepingReport.resx">
+      <DependentUpon>HousekeepingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\OverviewReport.resx">
+      <DependentUpon>OverviewReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportMenu.resx">
+      <DependentUpon>ReportMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RoomOccupancyReport.resx">
+      <DependentUpon>RoomOccupancyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RoomStatusReport.resx">
+      <DependentUpon>RoomStatusReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reservation.resx">
       <DependentUpon>Reservation.cs</DependentUpon>
@@ -176,6 +246,7 @@
       <Name>System.Windows.Forms.Calendar</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
