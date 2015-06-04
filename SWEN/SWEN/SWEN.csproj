@@ -53,6 +53,12 @@
     <Compile Include="AddStaff.Designer.cs">
       <DependentUpon>AddStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="CancelShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CancelShift.Designer.cs">
+      <DependentUpon>CancelShift.cs</DependentUpon>
+    </Compile>
     <Compile Include="Checkin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </Compile>
     <EmbeddedResource Include="AddStaff.resx">
       <DependentUpon>AddStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CancelShift.resx">
+      <DependentUpon>CancelShift.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Checkin.resx">
       <DependentUpon>Checkin.cs</DependentUpon>

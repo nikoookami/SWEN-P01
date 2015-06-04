@@ -23,6 +23,7 @@ namespace SWEN
 
         private void UpdateShift_Load(object sender, EventArgs e)
         {
+
             // TODO: This line of code loads data into the 'delonixRegiaDataSet.Housekeeping' table. You can move, or remove it, as needed.
             //this.housekeepingTableAdapter.Fill(this.delonixRegiaDataSet.Housekeeping);
             SqlCommand selectCommand = new SqlCommand("SELECT * FROM Housekeeping", cnn);
@@ -100,7 +101,7 @@ namespace SWEN
                 updateCommand.Connection = cnn;
                 updateCommand.Parameters.AddWithValue("@housekeepingtype", comboBoxDutyType.SelectedItem);
                 updateCommand.Parameters.AddWithValue("@housekeepingdate", dateTimePickerDate.Value);
-                updateCommand.Parameters.AddWithValue("@housekeepingtime", dateTimePickerStartTime.Value.TimeOfDay);
+                updateCommand.Parameters.AddWithValue("@housekeepingtime", dateTimePickerStartTime.Value.ToShortTimeString());
                 updateCommand.Parameters.AddWithValue("@staffid", comboBoxStaffID.SelectedItem);
                 updateCommand.Parameters.AddWithValue("@roomid", comboBoxRoomID.SelectedItem);
                 updateCommand.Parameters.AddWithValue("@housekeepingid", comboBoxSelectDutyID.SelectedItem);

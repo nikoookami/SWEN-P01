@@ -25,8 +25,16 @@ namespace SWEN
         private void AddStaff_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'delonixRegiaDataSet.Housekeeping' table. You can move, or remove it, as needed.
-            this.housekeepingTableAdapter.Fill(this.delonixRegiaDataSet.Housekeeping);
-            comboBoxDutyType.SelectedItem = null;
+            SqlCommand selectCommand = new SqlCommand("SELECT * FROM Housekeeping", cnn);
+            SqlDataAdapter ada = new SqlDataAdapter(selectCommand);
+            DataTable dt = new DataTable();
+            ada.Fill(dt);
+            foreach (DataRow row in dt.Rows)
+            {
+
+                comboBoxDutyID.Items.Add(row["housekeepingid"].ToString());
+            }
+            comboBoxDutyID.SelectedItem = null;
         }
 
         private void btnAddStaff_Click(object sender, EventArgs e)
@@ -80,10 +88,10 @@ namespace SWEN
                                         bankAcc = textBoxBankAcc.Text;
 
                                         // Check DUTYTYPE
-                                        if (comboBoxDutyType.SelectedItem != null)
+                                        if (comboBoxDutyID.SelectedItem != null)
                                         {
                                             countCheck++;
-                                            dutyID = comboBoxDutyType.Text;
+                                            dutyID = comboBoxDutyID.Text;
 
                                             // If all correct update Database                    
                                             if (countCheck == 4)

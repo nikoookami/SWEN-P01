@@ -30,7 +30,7 @@ namespace SWEN
 
                 string dutyType = comboBoxDutyType.SelectedItem.ToString();
                 string date = dateTimePickerDate.Value.ToString("dd-MM-yyyy");
-                string startTime = dateTimePickerStartTime.Value.ToString("hh:mm tt");
+                string startTime = dateTimePickerStartTime.Value.ToShortTimeString();
                 if (comboBoxStaffID.SelectedItem != null)
                 {
                     string staffID = comboBoxStaffID.SelectedValue.ToString();

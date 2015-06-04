@@ -41,7 +41,9 @@
             this.comboBoxStaffLevel = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBoxDutyType = new System.Windows.Forms.ComboBox();
+            this.comboBoxDutyID = new System.Windows.Forms.ComboBox();
+            this.housekeepingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.delonixRegiaDataSet = new SWEN.DelonixRegiaDataSet();
             this.dateTimePickerDoB = new System.Windows.Forms.DateTimePicker();
             this.Btn_AddStaff = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -50,11 +52,9 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.delonixRegiaDataSet = new SWEN.DelonixRegiaDataSet();
-            this.housekeepingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.housekeepingTableAdapter = new SWEN.DelonixRegiaDataSetTableAdapters.HousekeepingTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.delonixRegiaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.housekeepingBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delonixRegiaDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxStaffName
@@ -165,21 +165,28 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(12, 250);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 13);
+            this.label7.Size = new System.Drawing.Size(43, 13);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Duty type";
+            this.label7.Text = "Duty ID";
             // 
-            // comboBoxDutyType
+            // comboBoxDutyID
             // 
-            this.comboBoxDutyType.DataSource = this.housekeepingBindingSource;
-            this.comboBoxDutyType.DisplayMember = "housekeepingid";
-            this.comboBoxDutyType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxDutyType.FormattingEnabled = true;
-            this.comboBoxDutyType.Location = new System.Drawing.Point(105, 247);
-            this.comboBoxDutyType.Name = "comboBoxDutyType";
-            this.comboBoxDutyType.Size = new System.Drawing.Size(167, 21);
-            this.comboBoxDutyType.TabIndex = 12;
-            this.comboBoxDutyType.ValueMember = "housekeepingid";
+            this.comboBoxDutyID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDutyID.FormattingEnabled = true;
+            this.comboBoxDutyID.Location = new System.Drawing.Point(105, 247);
+            this.comboBoxDutyID.Name = "comboBoxDutyID";
+            this.comboBoxDutyID.Size = new System.Drawing.Size(167, 21);
+            this.comboBoxDutyID.TabIndex = 12;
+            // 
+            // housekeepingBindingSource
+            // 
+            this.housekeepingBindingSource.DataMember = "Housekeeping";
+            this.housekeepingBindingSource.DataSource = this.delonixRegiaDataSet;
+            // 
+            // delonixRegiaDataSet
+            // 
+            this.delonixRegiaDataSet.DataSetName = "DelonixRegiaDataSet";
+            this.delonixRegiaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dateTimePickerDoB
             // 
@@ -253,16 +260,6 @@
             this.label10.TabIndex = 44;
             this.label10.Text = "Home address";
             // 
-            // delonixRegiaDataSet
-            // 
-            this.delonixRegiaDataSet.DataSetName = "DelonixRegiaDataSet";
-            this.delonixRegiaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // housekeepingBindingSource
-            // 
-            this.housekeepingBindingSource.DataMember = "Housekeeping";
-            this.housekeepingBindingSource.DataSource = this.delonixRegiaDataSet;
-            // 
             // housekeepingTableAdapter
             // 
             this.housekeepingTableAdapter.ClearBeforeFill = true;
@@ -281,7 +278,7 @@
             this.Controls.Add(this.Btn_AddStaff);
             this.Controls.Add(this.dateTimePickerDoB);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBoxDutyType);
+            this.Controls.Add(this.comboBoxDutyID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBoxStaffLevel);
             this.Controls.Add(this.label5);
@@ -296,8 +293,8 @@
             this.Name = "AddStaff";
             this.Text = "AddStaff";
             this.Load += new System.EventHandler(this.AddStaff_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.delonixRegiaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.housekeepingBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delonixRegiaDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,7 +314,7 @@
         private System.Windows.Forms.ComboBox comboBoxStaffLevel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBoxDutyType;
+        private System.Windows.Forms.ComboBox comboBoxDutyID;
         private System.Windows.Forms.DateTimePicker dateTimePickerDoB;
         private System.Windows.Forms.Button Btn_AddStaff;
         private System.Windows.Forms.Label label8;
