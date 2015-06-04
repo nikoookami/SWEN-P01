@@ -53,6 +53,12 @@
     <Compile Include="AddStaff.Designer.cs">
       <DependentUpon>AddStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="checkbill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="checkbill.Designer.cs">
+      <DependentUpon>checkbill.cs</DependentUpon>
+    </Compile>
     <Compile Include="class\booking.cs" />
     <Compile Include="Checkin.cs">
       <SubType>Form</SubType>
@@ -84,6 +90,12 @@
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POSrecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POSrecord.Designer.cs">
+      <DependentUpon>POSrecord.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -117,6 +129,18 @@
     <Compile Include="UpdateBooking.Designer.cs">
       <DependentUpon>UpdateBooking.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdatePaymentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatePaymentInfo.Designer.cs">
+      <DependentUpon>UpdatePaymentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateSaleInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateSaleInfo.Designer.cs">
+      <DependentUpon>UpdateSaleInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateStaff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +149,9 @@
     </Compile>
     <EmbeddedResource Include="AddStaff.resx">
       <DependentUpon>AddStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="checkbill.resx">
+      <DependentUpon>checkbill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Checkin.resx">
       <DependentUpon>Checkin.cs</DependentUpon>
@@ -140,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POSrecord.resx">
+      <DependentUpon>POSrecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -165,6 +195,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateBooking.resx">
       <DependentUpon>UpdateBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatePaymentInfo.resx">
+      <DependentUpon>UpdatePaymentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateSaleInfo.resx">
+      <DependentUpon>UpdateSaleInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateStaff.resx">
       <DependentUpon>UpdateStaff.cs</DependentUpon>

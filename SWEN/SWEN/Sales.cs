@@ -28,7 +28,7 @@ namespace SWEN
         private void button2_Click(object sender, EventArgs e)
         {
             //this.Hide();
-            var form = new Checkin();
+            var form = new checkbill();
             //form.Closed += (s, args) => this.Close();
             form.Show();
         }
@@ -36,7 +36,7 @@ namespace SWEN
         private void button3_Click(object sender, EventArgs e)
         {
             //this.Hide();
-            var form = new Checkout();
+            var form = new UpdateSaleInfo();
             //form.Closed += (s, args) => this.Close();
             form.Show();
         }
@@ -44,7 +44,7 @@ namespace SWEN
         private void button1_Click(object sender, EventArgs e)
         {
             //this.Hide();
-            var form = new Reservation();
+            var form = new POSrecord();
             //form.Closed += (s, args) => this.Close();
             form.Show();
 
@@ -53,7 +53,7 @@ namespace SWEN
         private void button4_Click(object sender, EventArgs e)
         {
             //this.Hide();
-            var form = new UpdateBooking();
+            var form = new UpdatePaymentInfo();
             //form.Closed += (s, args) => this.Close();
             form.Show();
 
@@ -62,6 +62,11 @@ namespace SWEN
         private void RoomBooking_Load(object sender, EventArgs e)
         {
            // dataGridView1.DataSource = DataBase.GetAllInfo();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
