@@ -46,8 +46,8 @@
             this.staffTableAdapter = new SWEN.DelonixRegiaDataSetTableAdapters.StaffTableAdapter();
             this.roomTableAdapter = new SWEN.DelonixRegiaDataSetTableAdapters.RoomTableAdapter();
             this.comboBoxSelectDutyID = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.housekeepingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label6 = new System.Windows.Forms.Label();
             this.housekeepingTableAdapter = new SWEN.DelonixRegiaDataSetTableAdapters.HousekeepingTableAdapter();
             this.housekeepingBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).BeginInit();
@@ -178,6 +178,7 @@
             this.buttonCreateShift.TabIndex = 23;
             this.buttonCreateShift.Text = "Create";
             this.buttonCreateShift.UseVisualStyleBackColor = true;
+            this.buttonCreateShift.Click += new System.EventHandler(this.buttonCreateShift_Click);
             // 
             // staffTableAdapter
             // 
@@ -189,16 +190,18 @@
             // 
             // comboBoxSelectDutyID
             // 
-            this.comboBoxSelectDutyID.DataSource = this.housekeepingBindingSource;
-            this.comboBoxSelectDutyID.DisplayMember = "housekeepingid";
             this.comboBoxSelectDutyID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSelectDutyID.FormattingEnabled = true;
             this.comboBoxSelectDutyID.Location = new System.Drawing.Point(99, 12);
             this.comboBoxSelectDutyID.Name = "comboBoxSelectDutyID";
             this.comboBoxSelectDutyID.Size = new System.Drawing.Size(264, 21);
             this.comboBoxSelectDutyID.TabIndex = 25;
-            this.comboBoxSelectDutyID.ValueMember = "housekeepingid";
             this.comboBoxSelectDutyID.SelectionChangeCommitted += new System.EventHandler(this.comboBoxSelectDutyID_SelectionChangeCommitted);
+            // 
+            // housekeepingBindingSource
+            // 
+            this.housekeepingBindingSource.DataMember = "Housekeeping";
+            this.housekeepingBindingSource.DataSource = this.delonixRegiaDataSet;
             // 
             // label6
             // 
@@ -208,11 +211,6 @@
             this.label6.Size = new System.Drawing.Size(76, 13);
             this.label6.TabIndex = 24;
             this.label6.Text = "Select Duty ID";
-            // 
-            // housekeepingBindingSource
-            // 
-            this.housekeepingBindingSource.DataMember = "Housekeeping";
-            this.housekeepingBindingSource.DataSource = this.delonixRegiaDataSet;
             // 
             // housekeepingTableAdapter
             // 
