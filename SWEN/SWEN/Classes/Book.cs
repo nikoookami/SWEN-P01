@@ -6,32 +6,63 @@ using System.Threading.Tasks;
 
 namespace SWEN_Assignment_3.Classes
 {
-    class Book
+    class BOOK
     {
-        public int bookingid { get; set; }
-        public string check_in_date { get; set; }
-        public string check_out_date { get; set; }
-        public int no_of_rooms { get; set; }
-        public int no_of_adults { get; set; }
-        public int no_of_children { get; set; }
-        public int guestid { get; set; }
-        public int staffid { get; set; }
-        public string roomno { get; set; }
+        private int bookingid;
+        private String check_in_date;
+        private String check_out_date;
+        private int no_of_rooms;
+        private int no_of_adults;
+        private int no_of_children;
+        private int guestid;
+        private int staffid;
 
-        public Book() { }
-
-        public Book(int bookingid, string check_in_date, string check_out_date, int no_of_rooms, int no_of_adults,
-                    int no_of_children, int guestid, int staffid, string roomno)
+        public int BookingID
         {
-            this.bookingid = bookingid;
-            this.check_in_date = check_in_date;
-            this.check_out_date = check_out_date;
-            this.no_of_rooms = no_of_rooms;
-            this.no_of_adults = no_of_adults;
-            this.no_of_children = no_of_children;
-            this.guestid = guestid;
-            this.staffid = staffid;
-            this.roomno = roomno;
+            get { return bookingid; }
+            set { bookingid = value; }
+        }
+
+        public string Check_In_Date
+        {
+            get { return check_in_date; }
+            set { check_in_date = value; }
+        }
+
+        public string Check_Out_Date
+        {
+            get { return check_out_date; }
+            set { check_out_date = value; }
+        }
+
+        public int No_Of_Rooms
+        {
+            get { return no_of_rooms; }
+            set { no_of_rooms = value; }
+        }
+
+        public int No_Of_Adults
+        {
+            get { return no_of_adults; }
+            set { no_of_adults = value; }
+        }
+
+        public int No_Of_Children
+        {
+            get { return no_of_children; }
+            set { no_of_children = value; }
+        }
+
+        public int GuestID
+        {
+            get { return guestid; }
+            set { guestid = value; }
+        }
+
+        public int StaffID
+        {
+            get { return staffid; }
+            set { staffid = value; }
         }
     }
 }
