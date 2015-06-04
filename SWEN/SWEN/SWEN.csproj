@@ -101,6 +101,8 @@
     <Compile Include="Checkout.Designer.cs">
       <DependentUpon>Checkout.cs</DependentUpon>
     </Compile>
+    <Compile Include="class\booking.cs" />
+    <Compile Include="class\DataBase.cs" />
     <Compile Include="Classes\BookingDBManager.cs" />
     <Compile Include="Classes\GuestDBManager.cs" />
     <Compile Include="Classes\Housekeeping.cs" />
