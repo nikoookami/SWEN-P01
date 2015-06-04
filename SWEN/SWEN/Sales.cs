@@ -61,7 +61,7 @@ namespace SWEN
 
         private void RoomBooking_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = DataBase.GetAllInfo();
+           // dataGridView1.DataSource = DataBase.GetAllInfo();
         }
     }
 }
