@@ -15,6 +15,7 @@ namespace SWEN
         public POSrecord()
         {
             InitializeComponent();
+            //textBox3.Text = "a";  
         }
 
         private void POSrecord_Load(object sender, EventArgs e)
@@ -26,7 +27,32 @@ namespace SWEN
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-              
+           // textBox3.Text = "a";  
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string guestid= textBox1.Text;
+            dataGridView1.DataSource = DataBase.GetSalesInfo(guestid);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string guestid = textBox1.Text;
+            string productname = comboBox1.Text;
+            string quantity = textBox3.Text;
+            string dis = textBox2.Text;
+            double total;
+            string productID = DataBase.Getproductid(productname);
+                string price = DataBase.Getproductprice(productname);
+                total = Convert.ToDouble(price) * Convert.ToDouble(quantity) * ((100-Convert.ToDouble(dis)) / 100);
+                    DataBase.Insertsalesinfo(guestid, productname, productID, price, quantity,total.ToString());
+            dataGridView1.DataSource = DataBase.GetSalesInfo(guestid);
+        }
+
+       
+
+      
     }
 }

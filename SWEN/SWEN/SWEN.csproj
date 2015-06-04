@@ -59,6 +59,7 @@
     <Compile Include="checkbill.Designer.cs">
       <DependentUpon>checkbill.cs</DependentUpon>
     </Compile>
+    <Compile Include="class\billing.cs" />
     <Compile Include="class\booking.cs" />
     <Compile Include="Checkin.cs">
       <SubType>Form</SubType>
@@ -73,10 +74,22 @@
       <DependentUpon>Checkout.cs</DependentUpon>
     </Compile>
     <Compile Include="class\DataBase.cs" />
+    <Compile Include="class\payment.cs" />
+    <Compile Include="class\sales.cs" />
     <Compile Include="DelonixRegiaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DelonixRegiaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DelonixRegiaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DelonixRegiaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DelonixRegiaDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DelonixRegiaDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -220,6 +233,28 @@
     </None>
     <None Include="DelonixRegiaDataSet.xss">
       <DependentUpon>DelonixRegiaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DelonixRegiaDataSet1.xsc">
+      <DependentUpon>DelonixRegiaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DelonixRegiaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DelonixRegiaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DelonixRegiaDataSet1.xss">
+      <DependentUpon>DelonixRegiaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DelonixRegiaDataSet2.xsc">
+      <DependentUpon>DelonixRegiaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DelonixRegiaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DelonixRegiaDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DelonixRegiaDataSet2.xss">
+      <DependentUpon>DelonixRegiaDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

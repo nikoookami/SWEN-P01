@@ -16,5 +16,11 @@ namespace SWEN
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string id=textBox1.Text;
+            dataGridView1.DataSource = DataBase.GetAllBillInfo(id);
+        }
     }
 }

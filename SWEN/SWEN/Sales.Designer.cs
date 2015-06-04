@@ -36,7 +36,8 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -51,7 +52,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 70);
+            this.button2.Location = new System.Drawing.Point(13, 128);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 23);
             this.button2.TabIndex = 1;
@@ -61,7 +62,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 99);
+            this.button3.Location = new System.Drawing.Point(12, 70);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(140, 23);
             this.button3.TabIndex = 2;
@@ -71,7 +72,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(12, 128);
+            this.button4.Location = new System.Drawing.Point(12, 99);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(140, 23);
             this.button4.TabIndex = 3;
@@ -92,10 +93,10 @@
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(158, 41);
+            this.webBrowser1.Location = new System.Drawing.Point(190, 41);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(632, 250);
+            this.webBrowser1.Size = new System.Drawing.Size(600, 250);
             this.webBrowser1.TabIndex = 5;
             // 
             // button5
@@ -104,36 +105,37 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(139, 23);
             this.button5.TabIndex = 6;
-            this.button5.Text = "proceed to payment";
+            this.button5.Text = "Displays Details";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(12, 215);
+            this.button6.Location = new System.Drawing.Point(13, 187);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(139, 23);
             this.button6.TabIndex = 7;
             this.button6.Text = "Print invoice";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // comboBox1
+            // printDialog1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "CASH PAYMENT",
-            "CREADIT CARD PAYMENT"});
-            this.comboBox1.Location = new System.Drawing.Point(13, 188);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(138, 21);
-            this.comboBox1.TabIndex = 8;
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(13, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(139, 20);
+            this.textBox1.TabIndex = 8;
             // 
             // Sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(834, 333);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.webBrowser1);
@@ -146,6 +148,7 @@
             this.Text = "Sales Module";
             this.Load += new System.EventHandler(this.RoomBooking_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -159,7 +162,8 @@
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.TextBox textBox1;
     /*  private System.Windows.Forms.DataGridViewTextBoxColumn BookingID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CheckInDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn GuestName;
