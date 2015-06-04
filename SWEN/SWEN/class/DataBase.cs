@@ -75,7 +75,7 @@ namespace Login
                 conn.ConnectionString = GSM_CONN_STR;
                 conn.Open();
                 comm.Connection = conn;
-                comm.CommandText = "SELECT * from Guest b,Booking a where a.guestid=b.guestid   ";
+                comm.CommandText = "SELECT * from Guest b,Booking a   ";
                 SqlDataReader dr = comm.ExecuteReader();
 
                 while (dr.Read())
