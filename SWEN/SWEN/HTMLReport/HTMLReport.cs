@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace HTMLReport
 {
-<<<<<<< HEAD
-    class TMLReport
-=======
+
     class HTMLReport
->>>>>>> origin/ChengKai
     {
         
     }

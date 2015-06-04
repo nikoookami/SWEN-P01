@@ -101,31 +101,22 @@
     <Compile Include="Checkout.Designer.cs">
       <DependentUpon>Checkout.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <Compile Include="Classes\Book.cs" />
     <Compile Include="Classes\BookingDBManager.cs" />
-    <Compile Include="Classes\Guest.cs" />
     <Compile Include="Classes\GuestDBManager.cs" />
     <Compile Include="Classes\Housekeeping.cs" />
     <Compile Include="Classes\HousekeepingDBManager.cs" />
-=======
     <Compile Include="Classes\BOOK.cs" />
     <Compile Include="Classes\Booking.cs" />
     <Compile Include="Classes\DBManager.cs" />
     <Compile Include="Classes\Guest.cs" />
->>>>>>> origin/ChengKai
     <Compile Include="Classes\Payment.cs" />
     <Compile Include="Classes\Reports\General.cs" />
     <Compile Include="Classes\Reports\HKReport.cs" />
     <Compile Include="Classes\Reports\Overview.cs" />
     <Compile Include="Classes\Reports\Room.cs" />
     <Compile Include="Classes\Reports\RoomOccupancy.cs" />
-<<<<<<< HEAD
     <Compile Include="Classes\Room.cs" />
     <Compile Include="Classes\RoomDBManager.cs" />
-=======
->>>>>>> origin/ChengKai
     <Compile Include="Classes\Staff.cs" />
     <Compile Include="Classes\UserAccount.cs" />
     <Compile Include="DatabaseHelper\DatabaseConnectionString.cs" />
@@ -135,8 +126,6 @@
     <Compile Include="DatabaseHelper\DatabaseInsertQuery.cs" />
     <Compile Include="DatabaseHelper\DatabaseRetrieveQuery.cs" />
     <Compile Include="DatabaseHelper\DatabaseUpdateQuery.cs" />
-<<<<<<< HEAD
-=======
     <Compile Include="CreateShift.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,9 +143,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DelonixRegiaDataSet.xsd</DependentUpon>
     </Compile>
->>>>>>> origin/Thanh
-=======
->>>>>>> origin/ChengKai
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,7 +219,6 @@
     <Compile Include="UpdateBooking.Designer.cs">
       <DependentUpon>UpdateBooking.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="UpdateShift.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,8 +231,6 @@
     <Compile Include="UpdateStaff.Designer.cs">
       <DependentUpon>UpdateStaff.cs</DependentUpon>
     </Compile>
-=======
->>>>>>> origin/ChengKai
     <EmbeddedResource Include="AddStaff.resx">
       <DependentUpon>AddStaff.cs</DependentUpon>
     </EmbeddedResource>
@@ -327,7 +310,6 @@
     <EmbeddedResource Include="UpdateBooking.resx">
       <DependentUpon>UpdateBooking.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="UpdateShift.resx">
       <DependentUpon>UpdateShift.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,8 +327,6 @@
     <None Include="DelonixRegiaDataSet.xss">
       <DependentUpon>DelonixRegiaDataSet.xsd</DependentUpon>
     </None>
-=======
->>>>>>> origin/ChengKai
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -13,11 +13,7 @@ namespace SWEN_Assignment_3.Classes.Reports
         private string room_type;
         private string bed_type;
         private string status;
-<<<<<<< HEAD
         private double room_rates;
-=======
-        private decimal room_rates;
->>>>>>> origin/ChengKai
         private int bookingid;
 
         public int RoomID
@@ -50,11 +46,7 @@ namespace SWEN_Assignment_3.Classes.Reports
             set { status = value; }
         }
 
-<<<<<<< HEAD
         public double Room_Rates
-=======
-        public decimal Room_Rates
->>>>>>> origin/ChengKai
         {
             get { return room_rates; }
             set { room_rates = value; }
