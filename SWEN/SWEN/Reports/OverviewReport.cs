@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using HTMLReport;
 using System.IO;
-using Login.Classes;
+using SWEN.Classes;
 
 namespace SWEN_Assignment_3.Reports
 {
