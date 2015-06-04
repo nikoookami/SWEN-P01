@@ -59,15 +59,12 @@
             // 
             // comboBoxStaffID
             // 
-            this.comboBoxStaffID.DataSource = this.staffBindingSource;
-            this.comboBoxStaffID.DisplayMember = "staffid";
             this.comboBoxStaffID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxStaffID.FormattingEnabled = true;
             this.comboBoxStaffID.Location = new System.Drawing.Point(99, 128);
             this.comboBoxStaffID.Name = "comboBoxStaffID";
             this.comboBoxStaffID.Size = new System.Drawing.Size(264, 21);
             this.comboBoxStaffID.TabIndex = 20;
-            this.comboBoxStaffID.ValueMember = "staffid";
             // 
             // staffBindingSource
             // 
@@ -146,15 +143,12 @@
             // 
             // comboBoxRoomID
             // 
-            this.comboBoxRoomID.DataSource = this.roomBindingSource;
-            this.comboBoxRoomID.DisplayMember = "roomid";
             this.comboBoxRoomID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxRoomID.FormattingEnabled = true;
             this.comboBoxRoomID.Location = new System.Drawing.Point(99, 155);
             this.comboBoxRoomID.Name = "comboBoxRoomID";
             this.comboBoxRoomID.Size = new System.Drawing.Size(264, 21);
             this.comboBoxRoomID.TabIndex = 22;
-            this.comboBoxRoomID.ValueMember = "roomid";
             // 
             // roomBindingSource
             // 
@@ -176,9 +170,9 @@
             this.buttonCreateShift.Name = "buttonCreateShift";
             this.buttonCreateShift.Size = new System.Drawing.Size(350, 23);
             this.buttonCreateShift.TabIndex = 23;
-            this.buttonCreateShift.Text = "Create";
+            this.buttonCreateShift.Text = "Update";
             this.buttonCreateShift.UseVisualStyleBackColor = true;
-            this.buttonCreateShift.Click += new System.EventHandler(this.buttonCreateShift_Click);
+            this.buttonCreateShift.Click += new System.EventHandler(this.buttonUpdateShift_Click);
             // 
             // staffTableAdapter
             // 
