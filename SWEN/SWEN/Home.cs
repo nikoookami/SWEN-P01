@@ -13,10 +13,13 @@ using System.IO;
 using SWEN_Assignment_3.Classes;
 using SWEN_Assignment_3.Classes.Reports;
 using SWEN_Assignment_3;
+using System.Data.SqlClient;
 namespace SWEN
 {
     public partial class Home : Form
     {
+        static SqlConnection cnn = new SqlConnection("Server=SIRIUS;Database=DelonixRegia;User ID=bspiSCM;password=Nikoookami02");
+
         public Home()
         {
             InitializeComponent();
@@ -52,6 +55,16 @@ namespace SWEN
             var form = new ReportMenu();
             form.Closed += (s, args) => this.Close();
             form.Show();
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            SqlCommand selectCommand = new SqlCommand("SELECT * FROM Staff", cnn);
+            SqlDataAdapter ada = new SqlDataAdapter(selectCommand);
+            DataTable dt = new DataTable();
+            ada.Fill(dt);
+
+            labelNoOfStaff.Text = "No. of staff: " + dt.Rows.Count;
         }
     }
 }

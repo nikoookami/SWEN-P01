@@ -37,17 +37,17 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelOccupiedRooms = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labelNoOfStaff = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -113,6 +113,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(224, 64);
             this.panel1.TabIndex = 5;
+            this.panel1.Visible = false;
             // 
             // button1
             // 
@@ -122,6 +123,7 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "Update profile";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             // 
             // label2
             // 
@@ -136,11 +138,21 @@
             // 
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.labelOccupiedRooms);
             this.panel2.Location = new System.Drawing.Point(12, 82);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(224, 64);
             this.panel2.TabIndex = 7;
+            this.panel2.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 38);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(126, 13);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Check-in/Check-out: 7/3";
             // 
             // label3
             // 
@@ -151,33 +163,52 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "No. of guests: 35";
             // 
-            // label4
+            // labelOccupiedRooms
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 3);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Occupied Rooms: 23/40";
+            this.labelOccupiedRooms.AutoSize = true;
+            this.labelOccupiedRooms.Location = new System.Drawing.Point(3, 3);
+            this.labelOccupiedRooms.Name = "labelOccupiedRooms";
+            this.labelOccupiedRooms.Size = new System.Drawing.Size(124, 13);
+            this.labelOccupiedRooms.TabIndex = 4;
+            this.labelOccupiedRooms.Text = "Occupied Rooms: 23/40";
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.labelNoOfStaff);
             this.panel3.Location = new System.Drawing.Point(12, 152);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(224, 64);
             this.panel3.TabIndex = 8;
+            this.panel3.Visible = false;
             // 
-            // label6
+            // label11
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 3);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "No. of staff: 34";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(3, 37);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(61, 13);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Overtime: 0";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Absence: 0";
+            // 
+            // labelNoOfStaff
+            // 
+            this.labelNoOfStaff.AutoSize = true;
+            this.labelNoOfStaff.Location = new System.Drawing.Point(3, 3);
+            this.labelNoOfStaff.Name = "labelNoOfStaff";
+            this.labelNoOfStaff.Size = new System.Drawing.Size(71, 13);
+            this.labelNoOfStaff.TabIndex = 4;
+            this.labelNoOfStaff.Text = "No. of staff: 0";
             // 
             // panel4
             // 
@@ -188,6 +219,17 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(224, 64);
             this.panel4.TabIndex = 7;
+            this.panel4.Visible = false;
+            // 
+            // label10
+            // 
+            this.label10.AllowDrop = true;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(3, 20);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(83, 13);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "On 12 Jun 2015";
             // 
             // label7
             // 
@@ -208,43 +250,6 @@
             this.label8.TabIndex = 4;
             this.label8.Text = "Last report: Monthly guest report";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 38);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(126, 13);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Check-in/Check-out: 7/3";
-            // 
-            // label10
-            // 
-            this.label10.AllowDrop = true;
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 20);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(83, 13);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "On 12 Jun 2015";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 20);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Absence: 1";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 37);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(61, 13);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Overtime: 3";
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,6 +265,7 @@
             this.Controls.Add(this.buttonRoomBooking);
             this.Name = "Home";
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -284,9 +290,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelOccupiedRooms;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelNoOfStaff;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;

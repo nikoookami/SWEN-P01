@@ -33,8 +33,6 @@ namespace SWEN
             foreach (DataRow row in dt.Rows)
             {
                 comboBoxSelectDutyID.Items.Add(row["housekeepingid"].ToString());
-
-
             }
             SqlCommand selectCommandStaff = new SqlCommand("SELECT * FROM Staff", cnn);
             SqlDataAdapter adaStaff = new SqlDataAdapter(selectCommandStaff);
@@ -87,7 +85,6 @@ namespace SWEN
             {
                 comboBoxRoomID.SelectedItem = dr["roomid"].ToString();
             }
-
         }
 
         private void buttonUpdateShift_Click(object sender, EventArgs e)
