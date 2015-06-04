@@ -13,7 +13,7 @@ namespace SWEN
 {
     public partial class AddStaff : Form
     {
-
+        //EDIT TO TRY MERGE!
         public static string connectionString = "Server=SIRIUS;Database=DelonixRegia;User ID=bspiSCM;password=Nikoookami02";
         public static SqlConnection cnn = new SqlConnection(connectionString);
 
