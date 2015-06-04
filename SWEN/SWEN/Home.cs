@@ -19,7 +19,12 @@ namespace SWEN
     public partial class Home : Form
     {
         static SqlConnection cnn = new SqlConnection("Server=SIRIUS;Database=DelonixRegia;User ID=bspiSCM;password=Nikoookami02");
-
+        static string username;
+        public Home(string _username)
+        {
+            username = _username;
+            InitializeComponent();
+        }
         public Home()
         {
             InitializeComponent();
@@ -64,6 +69,7 @@ namespace SWEN
             DataTable dt = new DataTable();
             ada.Fill(dt);
 
+            labelUsername.Text = "Username: " + username;
             labelNoOfStaff.Text = "No. of staff: " + dt.Rows.Count;
         }
     }
