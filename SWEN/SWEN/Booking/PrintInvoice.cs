@@ -54,20 +54,20 @@ namespace SWEN_Assignment_3.Booking
             n = new HTMLReportTableNormal("Invoice");
             //n.addTableHeader("UserID", "Username", "Password", "Address");
             //n.addTableHeader("Invoice" + Environment.NewLine);
-            BOOK toprint = new BOOK();
+            Book toprint = new Book();
             toprint = DBManager.getbookingByID(bookingID);
             Guest toprint1 = new Guest();
-            toprint1 = DBManager.getGuestByID(toprint.GuestID);
-            Room toprint2 = new Room();
+            toprint1 = DBManager.getGuestByID(toprint.guestid);
+            SWEN_Assignment_3.Classes.Reports.Room toprint2 = new SWEN_Assignment_3.Classes.Reports.Room();
             //toprint2 = DBManager;
             
             
             //n.addTableHeader("Invoice");
-            n.addContent("Name: ", toprint1.Name);
+            n.addContent("Name: ", toprint1.name);
             double totalalco = noofalco * pricealco;
             double totalnonalco = noofnonalco * pricenonalco;
-            n.addContent("Check In Date: ",toprint.Check_In_Date,"    Check Out Date: ",toprint.Check_Out_Date);
-            n.addContent("No of Rooms: ",Convert.ToString(toprint.No_Of_Rooms));
+            n.addContent("Check In Date: ",toprint.check_in_date,"    Check Out Date: ",toprint.check_out_date);
+            n.addContent("No of Rooms: ",Convert.ToString(toprint.no_of_rooms));
             n.addContent("No of Alcoholic Drinks Consumed: ",Convert.ToString(noofalco),"Total price: ",Convert.ToString(totalalco));
             n.addContent("No of Non-alcoholic Drinks Consumed: ", Convert.ToString(noofnonalco), "Total price: ", Convert.ToString(totalnonalco));
             n.addContent("Total Price of Drinks: "+ttdrinks);

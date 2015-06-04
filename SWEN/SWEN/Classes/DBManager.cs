@@ -197,13 +197,13 @@ namespace SWEN_Assignment_3.Classes
 
                 if (dr.Read())
                 {
-                    g.Name = (string)dr["name"];
-                    g.Phone = (int)dr["phone"];
-                    g.Email = (string)dr["email"];
-                    g.Address = (string)dr["address"];
-                    g.PostalCode = (int)dr["postalcode"];
-                    g.Country = (string)dr["country"];
-                    g.PaymentType = (string)dr["paymenttype"];
+                    g.name = (string)dr["name"];
+                    g.phone = (int)dr["phone"];
+                    g.email = (string)dr["email"];
+                    g.address = (string)dr["address"];
+                    g.postalcode = (int)dr["postalcode"];
+                    g.country = (string)dr["country"];
+                    g.paymenttype = (string)dr["paymenttype"];
                 }
                 dr.Close();
                 conn.Close();
@@ -267,24 +267,24 @@ namespace SWEN_Assignment_3.Classes
             return count;
 
         }
-        public static BOOK getbookingByID(int bookingid)
+        public static Book getbookingByID(int bookingid)
         {
             DatabaseRetrieveQuery r = new DatabaseRetrieveQuery("Booking");
             r.AddRestriction("bookingid", "=", Convert.ToString(bookingid));
             SqlDataReader dr = r.RunQuery();
-            BOOK c = new BOOK();
+            Book c = new Book();
 
             while (dr.Read())
             {
-                c.BookingID = (int)dr["bookingid"];
-                c.Check_In_Date = (dr["check_in_date"]).ToString();
-                c.Check_Out_Date = (dr["check_out_date"]).ToString();
+                c.bookingid = (int)dr["bookingid"];
+                c.check_in_date = (dr["check_in_date"]).ToString();
+                c.check_out_date = (dr["check_out_date"]).ToString();
                 //c.Start_time = (dr["Start_time"]).ToString();
-                c.No_Of_Rooms = (int)dr["no_of_rooms"];
-                c.No_Of_Adults = (int)dr["no_of_adults"];
-                c.No_Of_Children = (int)dr["no_of_children"];
-                c.GuestID = (int)dr["guestid"];
-                c.StaffID = (int)dr["staffid"];
+                c.no_of_rooms = (int)dr["no_of_rooms"];
+                c.no_of_adults = (int)dr["no_of_adults"];
+                c.no_of_children = (int)dr["no_of_children"];
+                c.guestid = (int)dr["guestid"];
+                c.staffid = (int)dr["staffid"];
             }
 
             return c;
@@ -298,43 +298,43 @@ namespace SWEN_Assignment_3.Classes
 
             while (dr.Read())
             {
-                c.GuestID = (int)dr["guestid"];
-                c.Name = (String)dr["name"];
-                c.Phone = (int)dr["phone"];
+                c.guestid = (int)dr["guestid"];
+                c.name = (String)dr["name"];
+                c.phone = (int)dr["phone"];
                 //c.Start_time = (dr["Start_time"]).ToString();
-                c.Email = (String)dr["email"];
-                c.Address = (String)dr["address"];
-                c.PostalCode = (int)dr["postalcode"];
-                c.Country = (String)dr["country"];
-                c.PaymentType = (String)dr["paymenttype"];
+                c.email = (String)dr["email"];
+                c.address = (String)dr["address"];
+                c.postalcode = (int)dr["postalcode"];
+                c.country = (String)dr["country"];
+                c.paymenttype = (String)dr["paymenttype"];
             }
 
             return c;
         }
-        public static Boolean updateBooking(BOOK b)
+        public static Boolean updateBooking(Book b)
         {
-            DatabaseUpdateQuery r = new DatabaseUpdateQuery("Booking","bookingid="+Convert.ToString(b.BookingID));
+            DatabaseUpdateQuery r = new DatabaseUpdateQuery("Booking","bookingid="+Convert.ToString(b.bookingid));
             //r.AddData("bookingid",Convert.ToString(b.BookingID));
-            r.AddData("check_in_date", b.Check_In_Date);
-            r.AddData("check_out_date", b.Check_Out_Date);
-            r.AddData("no_of_rooms", Convert.ToString(b.No_Of_Rooms));
-            r.AddData("no_of_adults", Convert.ToString(b.No_Of_Adults));
-            r.AddData("no_of_children", Convert.ToString(b.No_Of_Children));
-            r.AddData("guestid", Convert.ToString(b.GuestID));
-            r.AddData("staffid", Convert.ToString(b.StaffID));
+            r.AddData("check_in_date", b.check_in_date);
+            r.AddData("check_out_date", b.check_out_date);
+            r.AddData("no_of_rooms", Convert.ToString(b.no_of_rooms));
+            r.AddData("no_of_adults", Convert.ToString(b.no_of_adults));
+            r.AddData("no_of_children", Convert.ToString(b.no_of_children));
+            r.AddData("guestid", Convert.ToString(b.guestid));
+            r.AddData("staffid", Convert.ToString(b.staffid));
             return r.RunQuery();
         }
         public static Boolean updateGuest(Guest b)
         {
-            DatabaseUpdateQuery r = new DatabaseUpdateQuery("Guest", "guestid=" + Convert.ToString(b.GuestID));
+            DatabaseUpdateQuery r = new DatabaseUpdateQuery("Guest", "guestid=" + Convert.ToString(b.guestid));
             //r.AddData("guestid", Convert.ToString(b.GuestID));
-            r.AddData("name", b.Name);
-            r.AddData("phone", Convert.ToString(b.Phone));
-            r.AddData("email", b.Email);
-            r.AddData("address", b.Address);
-            r.AddData("postalcode", Convert.ToString(b.PostalCode));
-            r.AddData("country", b.Country);
-            r.AddData("paymenttype",b.PaymentType );
+            r.AddData("name", b.name);
+            r.AddData("phone", Convert.ToString(b.phone));
+            r.AddData("email", b.email);
+            r.AddData("address", b.address);
+            r.AddData("postalcode", Convert.ToString(b.postalcode));
+            r.AddData("country", b.country);
+            r.AddData("paymenttype",b.paymenttype);
             return r.RunQuery();
         }
         public static decimal gettotalroompricebyBID(int bookingid)

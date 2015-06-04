@@ -92,16 +92,16 @@ namespace SWEN_Assignment_3.Booking
         private void button1_Click(object sender, EventArgs e)
         {
             button4.Visible = true;
-            BOOK one = new BOOK();
+            Book one = new Book();
             one = DBManager.getbookingByID(Convert.ToInt32(textBox1.Text));
-            label13.Text = Convert.ToString(one.BookingID);
-            label16.Text = one.Check_In_Date;
-            label17.Text = one.Check_Out_Date;
-            label9.Text = Convert.ToString(one.No_Of_Rooms);
-            int guestid = one.GuestID;
+            label13.Text = Convert.ToString(one.bookingid);
+            label16.Text = one.check_in_date;
+            label17.Text = one.check_out_date;
+            label9.Text = Convert.ToString(one.no_of_rooms);
+            int guestid = one.guestid;
             Guest two = new Guest();
             two = DBManager.getGuestByID(guestid);
-            label19.Text = two.Name;
+            label19.Text = two.name;
             label24.Text = Convert.ToString(DBManager.gettotalroompricebyBID(Convert.ToInt32(textBox1.Text)));
             label23.Text = Convert.ToString((Convert.ToDouble(label24.Text) / 100) * 107);
         
