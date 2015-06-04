@@ -48,5 +48,13 @@ namespace Login
             form.Closed += (s, args) => this.Close();
             form.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new Sales();
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
     }
 }
