@@ -73,6 +73,11 @@
       <DependentUpon>Checkout.cs</DependentUpon>
     </Compile>
     <Compile Include="class\DataBase.cs" />
+    <Compile Include="DelonixRegiaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DelonixRegiaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +210,17 @@
     <EmbeddedResource Include="UpdateStaff.resx">
       <DependentUpon>UpdateStaff.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DelonixRegiaDataSet.xsc">
+      <DependentUpon>DelonixRegiaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DelonixRegiaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DelonixRegiaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DelonixRegiaDataSet.xss">
+      <DependentUpon>DelonixRegiaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

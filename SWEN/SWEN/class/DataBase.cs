@@ -97,7 +97,33 @@ namespace SWEN
             return products;
 
         }
+        public static string Getinfobyname()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand comm = new SqlCommand();
+            ArrayList products = new ArrayList();
+            try
+            {
+                conn.ConnectionString = GSM_CONN_STR;
+                conn.Open();
+                comm.Connection = conn;
+                comm.CommandText = "SELECT * from Guest b,Booking a where a.guestid=b.guestid   ";
+                SqlDataReader dr = comm.ExecuteReader();
 
+               
+                dr.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return products;
+
+        }
         
     }
 }

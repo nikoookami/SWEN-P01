@@ -16,5 +16,17 @@ namespace SWEN
         {
             InitializeComponent();
         }
+
+        private void POSrecord_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'delonixRegiaDataSet.Product' table. You can move, or remove it, as needed.
+            this.productTableAdapter.Fill(this.delonixRegiaDataSet.Product);
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+              
+        }
     }
 }
