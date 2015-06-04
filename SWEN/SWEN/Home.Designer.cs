@@ -181,7 +181,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(224, 64);
             this.panel3.TabIndex = 8;
-            this.panel3.Visible = false;
             // 
             // label11
             // 
@@ -191,6 +190,7 @@
             this.label11.Size = new System.Drawing.Size(61, 13);
             this.label11.TabIndex = 6;
             this.label11.Text = "Overtime: 0";
+            this.label11.Visible = false;
             // 
             // label5
             // 
@@ -200,6 +200,7 @@
             this.label5.Size = new System.Drawing.Size(61, 13);
             this.label5.TabIndex = 5;
             this.label5.Text = "Absence: 0";
+            this.label5.Visible = false;
             // 
             // labelNoOfStaff
             // 
