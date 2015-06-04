@@ -1403,6 +1403,7 @@ pre code {
 table {
   max-width: 100%;
   background-color: transparent;
+    color: #FFFFFF;
 }
 th {
   text-align: left;

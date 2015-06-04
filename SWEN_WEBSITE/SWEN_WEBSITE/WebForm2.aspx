@@ -75,6 +75,7 @@
                                 <input type="password" name="password" id="password">
                             </fieldset>
                             <input type="submit" id="login" value="Sign in">
+                            <input type="submit" id="Register" value="Register?">
                             <label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
                         </fieldset>
                         <span><a href="#">Forgot your password?</a></span>

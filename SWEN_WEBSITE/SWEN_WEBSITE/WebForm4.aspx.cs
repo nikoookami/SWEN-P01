@@ -58,6 +58,7 @@ namespace SWEN_WEBSITE
         
                 CustomerInfo p = new CustomerInfo(aa, a, b, c, d, y, f, g, h, i, j, k, l, o);
                 Database.InsertProductID(p);
+                Response.Redirect("WebForm5.aspx?");
 
             }
         

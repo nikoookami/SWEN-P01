@@ -1,12 +1,14 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm3.aspx.cs" Inherits="SWEN_WEBSITE.WebForm3" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm5.aspx.cs" Inherits="SWEN_WEBSITE.WebForm5" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-
+ 
     <title>HOTEL</title>
     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- Custom Theme files -->
     <link href="css/style.css" rel='stylesheet' type='text/css' />
@@ -37,6 +39,7 @@
                     <li><a href="#">ROOM TYPE</a></li>
                     <li><a href="#">Register</a></li>
 
+
                     <div class="clearfix"></div>
                 </ul>
                 <script type="text/javascript" src="js/responsive-nav.js"></script>
@@ -62,7 +65,7 @@
         </div>
         <div class="col-sm-4 header_right">
             <div id="loginContainer">
-                <a href="#" id="loginButton"><img src="images/login.png"><span>Login</span></a>
+                <a href="#" id="loginButton"><img src="images/login.png"><span>LogOut</span></a>
                 <div id="loginBox">
                     <form id="loginForm">
                         <fieldset id="body">
@@ -88,29 +91,35 @@
     </div>
 
 </head>
-<body>
-    <div class="banner">
-        <div class="container_wrap">
-            <div class="content_middle">
-                <h2>Room Availability</h2>
-                <div id="demo">
-                
-                    </div>
-                <br>
-                <button class="btn btn-primary" onclick="myFunction()">Refresh</button>
-                <button class="btn btn-primary" onclick="window.location.href = 'WebForm4.aspx'">Book Your Room Now</button>
+    <body>
+    
+        <div class="banner">
+            <div class="container">
+                <div class="container_wrap">
+                    <h1>Displaying your details</h1>
+                    <div class="living_middle">
+                    <form runat="server" >
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="guestid" DataSourceID="SqlDataSource1">
+                            <Columns>
+                                <asp:BoundField DataField="phone" HeaderText="phone" SortExpression="phone"  />
+                                <asp:BoundField DataField="country" HeaderText="country" SortExpression="country" />
+                                <asp:BoundField DataField="postalcode" HeaderText="postalcode" SortExpression="postalcode" />
+                                <asp:BoundField DataField="address" HeaderText="address" SortExpression="address" />
+                                <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
+                                <asp:BoundField DataField="paymenttype" HeaderText="paymenttype" SortExpression="paymenttype" />
+                                <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
+                                <asp:BoundField DataField="guestid" HeaderText="guestid" ReadOnly="True" SortExpression="guestid" />
+                            </Columns>
+                        </asp:GridView>  
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DelonixRegiaConnectionString %>" SelectCommand="SELECT [phone], [country], [postalcode], [address], [email], [paymenttype], [name], [guestid] FROM [Guest]"></asp:SqlDataSource>
+                   </form>
+                        </div>
+                </div>
             </div>
-        </div>
+    </div>
+    <footer>
+        <p >Copy Right 2015</p>
        
+    </footer>
 </body>
-
 </html>
-<script>
-    function myFunction() {
-        var v = Math.floor((Math.random() * 40) + 60);
-        var x = Math.floor((Math.random() * 30) + 50);
-        var y = Math.floor((Math.random() * 20) + 70);
-        var z = Math.floor((Math.random() * 10) + 90);
-        document.getElementById("demo").innerHTML = "Single Room: " + v+"%" + "<br>Junior Suite: " + x+"%" + "<br>Excutive Suite: " + y+"%" + "<br>Grand Suite: "+z+"%";
-    }
-</script>
