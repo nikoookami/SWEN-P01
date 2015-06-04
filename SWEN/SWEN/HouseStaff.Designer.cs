@@ -28,11 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange1 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange2 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange3 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange4 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
-            System.Windows.Forms.Calendar.CalendarHighlightRange calendarHighlightRange5 = new System.Windows.Forms.Calendar.CalendarHighlightRange();
             this.buttonBackToHome = new System.Windows.Forms.Button();
             this.buttonCancelShift = new System.Windows.Forms.Button();
             this.buttonUpdateShift = new System.Windows.Forms.Button();
@@ -47,11 +42,17 @@
             this.housekeepingid = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.username = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button4 = new System.Windows.Forms.Button();
-            this.calendar1 = new System.Windows.Forms.Calendar.Calendar();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonDeleteStaff = new System.Windows.Forms.Button();
             this.buttonCreateShift = new System.Windows.Forms.Button();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.ShiftID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.HousekeepingType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.HousekeepingTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.HousekeepingStaffID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.HousekeepingRoomID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.HousekeepingDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // buttonBackToHome
@@ -117,7 +118,7 @@
             this.listView1.Location = new System.Drawing.Point(158, 70);
             this.listView1.Margin = new System.Windows.Forms.Padding(50, 50, 3, 3);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(336, 470);
+            this.listView1.Size = new System.Drawing.Size(342, 470);
             this.listView1.TabIndex = 9;
             this.listView1.TileSize = new System.Drawing.Size(1, 1);
             this.listView1.UseCompatibleStateImageBehavior = false;
@@ -170,38 +171,6 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.buttonUpdateStaff_Click);
             // 
-            // calendar1
-            // 
-            this.calendar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.calendar1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            calendarHighlightRange1.DayOfWeek = System.DayOfWeek.Monday;
-            calendarHighlightRange1.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange1.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange2.DayOfWeek = System.DayOfWeek.Tuesday;
-            calendarHighlightRange2.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange2.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange3.DayOfWeek = System.DayOfWeek.Wednesday;
-            calendarHighlightRange3.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange3.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange4.DayOfWeek = System.DayOfWeek.Thursday;
-            calendarHighlightRange4.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange4.StartTime = System.TimeSpan.Parse("08:00:00");
-            calendarHighlightRange5.DayOfWeek = System.DayOfWeek.Friday;
-            calendarHighlightRange5.EndTime = System.TimeSpan.Parse("17:00:00");
-            calendarHighlightRange5.StartTime = System.TimeSpan.Parse("08:00:00");
-            this.calendar1.HighlightRanges = new System.Windows.Forms.Calendar.CalendarHighlightRange[] {
-        calendarHighlightRange1,
-        calendarHighlightRange2,
-        calendarHighlightRange3,
-        calendarHighlightRange4,
-        calendarHighlightRange5};
-            this.calendar1.Location = new System.Drawing.Point(500, 70);
-            this.calendar1.Name = "calendar1";
-            this.calendar1.Size = new System.Drawing.Size(516, 470);
-            this.calendar1.TabIndex = 13;
-            this.calendar1.Text = "calendar1";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -243,17 +212,71 @@
             this.buttonCreateShift.UseVisualStyleBackColor = true;
             this.buttonCreateShift.Click += new System.EventHandler(this.buttonCreateShift_Click);
             // 
+            // listView2
+            // 
+            this.listView2.AllowColumnReorder = true;
+            this.listView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ShiftID,
+            this.HousekeepingType,
+            this.HousekeepingDate,
+            this.HousekeepingTime,
+            this.HousekeepingStaffID,
+            this.HousekeepingRoomID});
+            this.listView2.FullRowSelect = true;
+            this.listView2.GridLines = true;
+            this.listView2.Location = new System.Drawing.Point(507, 70);
+            this.listView2.Margin = new System.Windows.Forms.Padding(50, 50, 3, 3);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(509, 470);
+            this.listView2.TabIndex = 18;
+            this.listView2.TileSize = new System.Drawing.Size(1, 1);
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // ShiftID
+            // 
+            this.ShiftID.Text = "Shift ID";
+            this.ShiftID.Width = 51;
+            // 
+            // HousekeepingType
+            // 
+            this.HousekeepingType.Text = "Housekeeping Type";
+            this.HousekeepingType.Width = 122;
+            // 
+            // HousekeepingTime
+            // 
+            this.HousekeepingTime.Text = "Shift Time";
+            this.HousekeepingTime.Width = 76;
+            // 
+            // HousekeepingStaffID
+            // 
+            this.HousekeepingStaffID.Text = "Staff ID";
+            this.HousekeepingStaffID.Width = 53;
+            // 
+            // HousekeepingRoomID
+            // 
+            this.HousekeepingRoomID.Text = "Room ID";
+            this.HousekeepingRoomID.Width = 63;
+            // 
+            // HousekeepingDate
+            // 
+            this.HousekeepingDate.Text = "Shift Date";
+            this.HousekeepingDate.Width = 78;
+            // 
             // HouseStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 552);
+            this.Controls.Add(this.listView2);
             this.Controls.Add(this.buttonCreateShift);
             this.Controls.Add(this.buttonDeleteStaff);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.calendar1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.buttonCancelShift);
             this.Controls.Add(this.buttonUpdateShift);
@@ -278,7 +301,6 @@
         private System.Windows.Forms.ColumnHeader staffid;
         private System.Windows.Forms.ColumnHeader fullname;
         private System.Windows.Forms.ColumnHeader dob;
-        private System.Windows.Forms.Calendar.Calendar calendar1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColumnHeader bankNo;
@@ -288,5 +310,12 @@
         private System.Windows.Forms.ColumnHeader username;
         private System.Windows.Forms.Button buttonDeleteStaff;
         private System.Windows.Forms.Button buttonCreateShift;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader ShiftID;
+        private System.Windows.Forms.ColumnHeader HousekeepingType;
+        private System.Windows.Forms.ColumnHeader HousekeepingTime;
+        private System.Windows.Forms.ColumnHeader HousekeepingStaffID;
+        private System.Windows.Forms.ColumnHeader HousekeepingRoomID;
+        private System.Windows.Forms.ColumnHeader HousekeepingDate;
     }
 }

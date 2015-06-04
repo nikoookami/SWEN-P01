@@ -41,9 +41,24 @@ namespace SWEN
                 listView1.Items.Add(listitem);
 
             }
-
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
 
+            SqlDataAdapter adaRoom = new SqlDataAdapter("SELECT * FROM Housekeeping", cnn);
+            DataTable dtRoom = new DataTable();
+            adaRoom.Fill(dtRoom);
+
+            for (int i = 0; i < dtRoom.Rows.Count; i++)
+            {
+                DataRow dr = dtRoom.Rows[i];
+                ListViewItem listitem = new ListViewItem(dr["housekeepingid"].ToString());
+                listitem.SubItems.Add(dr["housekeepingtype"].ToString());
+                listitem.SubItems.Add(dr["housekeepingdate"].ToString());
+                listitem.SubItems.Add(dr["housekeepingtime"].ToString());
+                listitem.SubItems.Add(dr["staffid"].ToString());
+                listitem.SubItems.Add(dr["roomid"].ToString());
+                listView2.Items.Add(listitem);
+
+            }
         }
         private void buttonBackToHome_Click(object sender, EventArgs e)
         {
@@ -71,6 +86,10 @@ namespace SWEN
 
         private void buttonCancelShift_Click(object sender, EventArgs e)
         {
+            //this.Hide();
+            var form = new CancelShift();
+            //form.Closed += (s, args) => this.Close();
+            form.Show();
 
         }
 
