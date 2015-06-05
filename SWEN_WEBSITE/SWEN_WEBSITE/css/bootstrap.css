@@ -1403,6 +1403,10 @@ pre code {
 table {
   max-width: 100%;
   background-color: transparent;
+<<<<<<< HEAD
+=======
+    color: #FFFFFF;
+>>>>>>> origin/ChunFoong
 }
 th {
   text-align: left;

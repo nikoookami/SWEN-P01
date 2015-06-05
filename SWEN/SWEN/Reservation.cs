@@ -20,7 +20,7 @@ namespace SWEN
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string guestID = "QW123";
+            string guestID = "123";
             string name;
             string number;
             string email;

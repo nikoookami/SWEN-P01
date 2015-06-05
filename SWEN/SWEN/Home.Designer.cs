@@ -48,10 +48,16 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonRoomBooking
@@ -154,6 +160,15 @@
             this.label9.TabIndex = 6;
             this.label9.Text = "Check-in/Check-out: 7/3";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 38);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(126, 13);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Check-in/Check-out: 7/3";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -232,6 +247,16 @@
             this.label10.TabIndex = 6;
             this.label10.Text = "On 12 Jun 2015";
             // 
+            // label10
+            // 
+            this.label10.AllowDrop = true;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(3, 20);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(83, 13);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "On 12 Jun 2015";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -251,11 +276,62 @@
             this.label8.TabIndex = 4;
             this.label8.Text = "Last report: Monthly guest report";
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(242, 292);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(227, 67);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "SALES AND CASHIER";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label12);
+            this.panel5.Controls.Add(this.label13);
+            this.panel5.Controls.Add(this.label14);
+            this.panel5.Location = new System.Drawing.Point(12, 295);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(224, 64);
+            this.panel5.TabIndex = 10;
+            // 
+            // label12
+            // 
+            this.label12.AllowDrop = true;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(3, 20);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(78, 13);
+            this.label12.TabIndex = 6;
+            this.label12.Text = "Transcation:10";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(3, 37);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(70, 13);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "Sales module";
+            // 
+            // label14
+            // 
+            this.label14.AllowDrop = true;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(3, 3);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(70, 13);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Staff ID:1234";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(481, 320);
+            this.ClientSize = new System.Drawing.Size(481, 420);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -275,6 +351,8 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -301,5 +379,10 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
     }
 }

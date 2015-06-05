@@ -65,7 +65,11 @@
         </div>
         <div class="col-sm-4 header_right">
             <div id="loginContainer">
+<<<<<<< HEAD
                 <a href="#" id="loginButton"><img src="images/login.png"><span>Login</span></a>
+=======
+                <a href="#" id="loginButton"><img src="images/login.png"><span>LogOut</span></a>
+>>>>>>> origin/ChunFoong
                 <div id="loginBox">
                     <form id="loginForm">
                         <fieldset id="body">
@@ -78,6 +82,10 @@
                                 <input type="password" name="password" id="password">
                             </fieldset>
                             <input type="submit" id="login" value="Sign in">
+<<<<<<< HEAD
+=======
+                             <input type="submit" id="Register" value="Register?">
+>>>>>>> origin/ChunFoong
                             <label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
                         </fieldset>
                         <span><a href="#">Forgot your password?</a></span>

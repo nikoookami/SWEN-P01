@@ -95,6 +95,12 @@
     <Compile Include="CancelShift.Designer.cs">
       <DependentUpon>CancelShift.cs</DependentUpon>
     </Compile>
+    <Compile Include="checkbill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="checkbill.Designer.cs">
+      <DependentUpon>checkbill.cs</DependentUpon>
+    </Compile>
     <Compile Include="Checkin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     <Compile Include="Checkout.Designer.cs">
       <DependentUpon>Checkout.cs</DependentUpon>
     </Compile>
+    <Compile Include="class\payment.cs" />
+    <Compile Include="class\sales.cs" />
+    <Compile Include="class\billing.cs" />
     <Compile Include="class\booking.cs" />
     <Compile Include="class\DataBase.cs" />
     <Compile Include="Classes\BookingDBManager.cs" />
@@ -151,6 +160,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DelonixRegiaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DelonixRegiaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DelonixRegiaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DelonixRegiaDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DelonixRegiaDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +189,12 @@
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POSrecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POSrecord.Designer.cs">
+      <DependentUpon>POSrecord.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -215,6 +240,12 @@
     <Compile Include="Reservation.Designer.cs">
       <DependentUpon>Reservation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales.Designer.cs">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </Compile>
     <Compile Include="RoomBooking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +263,18 @@
     </Compile>
     <Compile Include="UpdateShift.Designer.cs">
       <DependentUpon>UpdateShift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePaymentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatePaymentInfo.Designer.cs">
+      <DependentUpon>UpdatePaymentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateSaleInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateSaleInfo.Designer.cs">
+      <DependentUpon>UpdateSaleInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateStaff.cs">
       <SubType>Form</SubType>
@@ -263,6 +306,9 @@
     <EmbeddedResource Include="CancelShift.resx">
       <DependentUpon>CancelShift.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="checkbill.resx">
+      <DependentUpon>checkbill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Checkin.resx">
       <DependentUpon>Checkin.cs</DependentUpon>
     </EmbeddedResource>
@@ -283,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POSrecord.resx">
+      <DependentUpon>POSrecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -315,6 +364,9 @@
     <EmbeddedResource Include="Reservation.resx">
       <DependentUpon>Reservation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sales.resx">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RoomBooking.resx">
       <DependentUpon>RoomBooking.cs</DependentUpon>
     </EmbeddedResource>
@@ -323,6 +375,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateShift.resx">
       <DependentUpon>UpdateShift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatePaymentInfo.resx">
+      <DependentUpon>UpdatePaymentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateSaleInfo.resx">
+      <DependentUpon>UpdateSaleInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateStaff.resx">
       <DependentUpon>UpdateStaff.cs</DependentUpon>
@@ -337,6 +395,28 @@
     </None>
     <None Include="DelonixRegiaDataSet.xss">
       <DependentUpon>DelonixRegiaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DelonixRegiaDataSet1.xsc">
+      <DependentUpon>DelonixRegiaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DelonixRegiaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DelonixRegiaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DelonixRegiaDataSet1.xss">
+      <DependentUpon>DelonixRegiaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DelonixRegiaDataSet2.xsc">
+      <DependentUpon>DelonixRegiaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DelonixRegiaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DelonixRegiaDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DelonixRegiaDataSet2.xss">
+      <DependentUpon>DelonixRegiaDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
