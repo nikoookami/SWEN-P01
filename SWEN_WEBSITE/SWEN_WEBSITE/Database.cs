@@ -11,11 +11,8 @@ namespace SWEN_WEBSITE
 {
     public class Database
     {
-<<<<<<< HEAD
-       private const string GSM_CONN_STR = "data source=.\\SQLEXPRESS;initial catalog=DelonixRegiaWebsite;integrated security=true;";
-=======
-        private const string GSM_CONN_STR = "data source=.\\SQLEXPRESS;initial catalog=DelonixRegia;integrated security=true;";
->>>>>>> origin/ChunFoong
+
+       private const string GSM_CONN_STR = "Data Source=SIRIUS;Initial Catalog=DelonixRegia;Persist Security Info=True;User ID=bspiSCM;Password=Nikoookami02;";
 
 
         public static bool InsertProductID(CustomerInfo u)
@@ -32,26 +29,6 @@ namespace SWEN_WEBSITE
                     conn.ConnectionString = GSM_CONN_STR;
                     conn.Open();
                     comm.Connection = conn;
-<<<<<<< HEAD
-                    comm.CommandText = "insert into BokingInfo " +
-                             "(FullName,PhoneNum,Email,Address,Postal,Country,NoOfAdults,NoOfChildren,CheckInDate,CheckOutDate,NoOfROom,RoomType,PaymentType,Remarks) values " +
-                             "(@FullName,@PhoneNum,@Email,@Address,@Postal,@Country,@NoOfAdults,@NoOfChildren,@CheckInDate,@CheckOutDate,@NoOfROom,@RoomType,@PaymentType,@Remarks);";
-
-                    comm.Parameters.AddWithValue("@FullName", u.Name);
-                    comm.Parameters.AddWithValue("@PhoneNum", u.PhoneNumber);
-                    comm.Parameters.AddWithValue("@Email", u.Email);
-                    comm.Parameters.AddWithValue("@Address", u.Address);
-                    comm.Parameters.AddWithValue("@Postal", u.Postal);
-                    comm.Parameters.AddWithValue("@Country", u.Country);
-                    comm.Parameters.AddWithValue("@NoOfAdults", u.Adult);
-                    comm.Parameters.AddWithValue("@NoOfChildren", u.Children);
-                    comm.Parameters.AddWithValue("@CheckInDate", u.Checkiin);
-                    comm.Parameters.AddWithValue("@CheckOutDate", u.Checkout);
-                    comm.Parameters.AddWithValue("@NoOfROom", u.Noofroom1);
-                    comm.Parameters.AddWithValue("@RoomType", u.Roomtype);
-                    comm.Parameters.AddWithValue("@PaymentType", u.PaymentType);
-                    comm.Parameters.AddWithValue("@Remarks", u.Remarks);
-=======
                     comm.CommandText = "insert into Guest " +
                              "(guestid,name,phone,email,address,postalcode,country,paymenttype) values " +
                              "(@guestid,@name,@phone,@email,@address,@postalcode,@country,@paymenttype);"+
@@ -76,7 +53,6 @@ namespace SWEN_WEBSITE
                     comm.Parameters.AddWithValue("@no_of_children", u.Children);
                     comm.Parameters.AddWithValue("@staffid", "1212");
                     comm.Parameters.AddWithValue("@roomno", u.Noofroom1);
->>>>>>> origin/ChunFoong
 
                     int rows = comm.ExecuteNonQuery();
                     if (rows > 0)
